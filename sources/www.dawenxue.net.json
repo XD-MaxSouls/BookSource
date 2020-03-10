@@ -1,0 +1,35 @@
+{
+    "name": "大文学无错小说网",
+    "url": "www.dawenxue.net",
+    "version": 100,
+    "search": {
+        "url": "https://www.dawenxue.net/modules/article/search.php@post->searchkey=${key}&searchtype=keywords",
+        "list": ".novelslist2>ul>li:gt(1)",
+        "name": "a.bookname",
+        "author": "a.author",
+        "cover": "a.bookimg > img",
+        "detail": "a.bookname"
+    },
+    "detail": {
+        "name": [".s2>a", "#info>h1"],
+        "author": [".s4", "#info>p:first-child"],
+        "cover": ["#fmimg>img@attr->src"],
+        "summary": ["#intro>p"],
+        "status": ["td:nth-child(6)>a"],
+        "update": ["li>span:nth-child(5)", "#info>p:nth-child(4)@js->${this}.match('最后更新：(.*)')[1]"],
+        "lastChapter": [".s3>a","#info>p:nth-child(5)>a"],
+        "catalog": []
+    },
+    "catalog": {
+        "list": "#list > dl > dd",
+        "booklet": {
+            "name": "b",
+            "list": "dd"
+        },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content > p"
+    }
+}
