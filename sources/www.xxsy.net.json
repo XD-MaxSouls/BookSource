@@ -1,0 +1,26 @@
+{
+    "name": "潇湘书院",
+    "url": "www.xxsy.net",
+    "version": 100,
+    "search": {
+        "url": "https://www.xxsy.net/search?s_wd=${key}",
+        "list": ".result-list > ul > li",
+        "name": "h4 > a",
+        "author": "span > a:nth-child(1)",
+        "cover": "a > img",
+        "detail": "h4 > a"
+    },
+    "detail": {
+        "status": ".sub-cols > span:nth-child(2)",
+        "update": ".sub-cols > span:nth-child(4)",
+        "lastChapter": ".sub-newest > p:nth-child(1)"
+    },
+    "catalog": {
+        "list": "dd:nth-child(2) > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#auto-chapter>p"
+    }
+}
