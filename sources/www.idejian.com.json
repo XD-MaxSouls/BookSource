@@ -21,6 +21,6 @@
         "chapter": "a"
     },
     "chapter": {
-        "content": ".read_content > div:nth-child(2) >p"
+        "content": "p"
     }
 }
