@@ -1,0 +1,26 @@
+{
+    "name": "E小说",
+    "url": "www.zwda.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.zwda.com/search.php?keyword=${key}",
+        "list": ".result-list > div",
+        "name": "h3",
+        "author": "div > p:nth-child(1)",
+        "cover": "img",
+        "detail": "h3 > a"
+    },
+    "detail": {
+        "status": "#info > p:nth-child(3)",
+        "update": "#info > p:nth-child(4)",
+        "lastChapter": "#info > p:nth-child(5)"
+    },
+    "catalog": {
+        "list": "#list > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content>br"
+    }
+}
