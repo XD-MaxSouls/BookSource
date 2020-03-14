@@ -1,1 +1,25 @@
-
+{
+    "name": "全本小说网",
+    "url": "www.qb5.tw",
+    "version": 100,
+    "search": {
+        "url": "https://www.qb5.tw/modules/article/search.php?searchtype=articlename&searchkey=${key}",
+        "list": "#main > table > tbody > tr",
+        "name": "td:nth-child(1)",
+        "author": "td:nth-child(3)",
+        "detail": "td:nth-child(1) > a "
+    },
+    "detail": {
+        "cover": "div > img",        
+        "update": "div.update",
+        "lastChapter": "div.update"
+    },
+    "catalog": {
+        "list": "dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}
