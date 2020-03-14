@@ -1,1 +1,24 @@
-
+{
+    "name": "必读文学网",
+    "url": "www.biduwenxue.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.biduwenxue.com/search.html?key=${key}",
+        "list": "dl > dd",
+        "name": "a > h2",
+        "author": ".author",
+        "cover": "dl > dd> a > img",
+        "detail": "a > h2"
+    },
+    "detail": {
+        "status": ".div2 > span:nth-child(2)",
+    },
+    "catalog": {
+        "list": ".all_chapter_card.card > div.book_int_con > div > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".read_text > p"
+    }
+}
