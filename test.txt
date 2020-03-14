@@ -1,24 +1,27 @@
 {
-    "name": "必读文学网",
-    "url": "www.biduwenxue.com",
+    "name": "七猫中文网",
+    "url": "www.qimao.com",
     "version": 100,
     "search": {
-        "url": "http://www.biduwenxue.com/search.html?key=${key}",
-        "list": "dl > dd",
-        "name": "a > h2",
-        "author": ".author",
-        "cover": "dl > dd> a > img",
-        "detail": "a > h2"
+        "url": "https://www.qimao.com/search/index/?keyword=${key}",
+        "list": ".col-a > div > div.qm-mod-tb > ul > li",
+        "name": "div.col-a > div > div.qm-mod-tb > ul > li> div.txt > span.s-tit",
+        "author": "div.col-a > div > div.qm-mod-tb > ul > li > div.txt > p > span:nth-child(1)",
+        "cover": "div > div.qm-mod-tb > ul > li > div.pic > a",
+        "detail": "div.col-a > div > div.qm-mod-tb > ul > li> div.txt > span.s-tit > a"
     },
-    "detail": {
-        "status": ".div2 > span:nth-child(2)",
+	    "detail": {
+        "status": ".orange",
+        "update": ".time",
+        "lastChapter": ".data-txt > p"
+    }，
     },
     "catalog": {
-        "list": ".all_chapter_card.card > div.book_int_con > div > ul > li",
+        "list": "dd > div > span",
         "name": "a",
         "chapter": "a"
     },
     "chapter": {
-        "content": ".read_text > p"
+        "content": "div.article.js-article > p"
     }
 }
