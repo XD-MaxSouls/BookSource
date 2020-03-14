@@ -1,1 +1,52 @@
-
+{
+    "name": "得间小说",
+    "url": "www.idejian.com",
+    "version": 102,
+    "search": {
+        "url": "https://www.idejian.com/search?keyword=${key}",
+        "list": ".main > div > ul > li",
+        "name": ".rank_bkname",
+        "author": ".author",
+        "cover": ".items_l > a > img",
+        "detail": ".rank_bkname > a"
+    },
+    "detail": {
+        "status": "span.light_box",
+        "update": ".border_box.bk_detail > div > span@match->(.+)(?=·)",
+        "lastChapter": ".bk_detail > div > div > a@match->(?<=·连载至)(.+)"
+    },
+    "catalog": {
+        "list": ".catelog > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".bodytext"
+    }
+        "rank": [
+        {
+            "title":"人气热读榜",
+            "url": "https://www.idejian.com/bangdan/36001?&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+        },
+        {
+            "title":"小说点击榜",
+            "url": "https://www.idejian.com/bangdan/36002?&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+        },
+        {
+            "title":"小说收藏榜",
+            "url": "https://www.idejian.com/bangdan/36003?&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+        },
+        {
+            "title":"新书潜力榜",
+            "url": "https://www.idejian.com/bangdan/36004?&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+        },
+    ]
+}
