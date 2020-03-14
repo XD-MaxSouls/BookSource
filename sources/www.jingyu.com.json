@@ -1,23 +1,23 @@
 {
     "name": "鲸鱼阅读",
     "url": "www.jingyu.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "http://www.jingyu.com/search/?kw=${key}",
         "list": ".result-list>div",
         "name": ".title > a",
         "author": ".brief > span@match->.*?(?= | )",
+        "cover": "attr->data-src",
         "summary": ".desc",
         "detail": ".title > a"
     },
     "detail": {
-        "cover": "a > img",
         "lastChapter": ".details > a",
         "catalog": ".details > div > a:nth-child(3)"
     },
     "catalog": {
         "list": ".volume-list>li",
-	      "booklet": {
+	"booklet": {
             "name":"h4",
             "list": " .chapter-list>li"
         },
@@ -25,6 +25,6 @@
         "chapter": "a"
     },
     "chapter": {
-        "content": "#article-content > p"
-    }
+        "content": ".js-chapterContent"
+    }	
 }
