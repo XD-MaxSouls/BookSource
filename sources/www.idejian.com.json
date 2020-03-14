@@ -1,7 +1,7 @@
 {
     "name": "得间小说",
     "url": "www.idejian.com",
-    "version": 101,
+    "version": 102,
     "search": {
         "url": "https://www.idejian.com/search?keyword=${key}",
         "list": ".main > div > ul > li",
@@ -11,7 +11,7 @@
         "detail": ".rank_bkname > a"
     },
     "detail": {
-        "status": "span.light_box",
+        "status": "span.light_box@match->(?<=·连载)(.+)",
         "update": ".border_box.bk_detail > div > span",
         "lastChapter": ".bk_detail > div > div > a"
     },
