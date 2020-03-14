@@ -10,12 +10,11 @@
         "cover": "div > div.qm-mod-tb > ul > li > div.pic > a",
         "detail": "div.col-a > div > div.qm-mod-tb > ul > li> div.txt > span.s-tit > a"
     },
-	    "detail": {
+    "detail": {
         "status": ".orange",
         "update": ".time",
         "lastChapter": ".data-txt > p"
     }，
-    },
     "catalog": {
         "list": "dd > div > span",
         "name": "a",
