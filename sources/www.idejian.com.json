@@ -1,13 +1,14 @@
 {
     "name": "得间小说",
     "url": "www.idejian.com",
-    "version": 102,
+    "version": 103,
     "search": {
         "url": "https://www.idejian.com/search?keyword=${key}",
         "list": ".main > div > ul > li",
         "name": ".rank_bkname > a",
         "author": ".author",
         "cover": ".items_l > a > img",
+        "summary": ".rank_bkbrief",        
         "detail": ".rank_bkname > a"
     },
     "detail": {
