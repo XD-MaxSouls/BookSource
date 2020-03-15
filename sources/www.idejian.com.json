@@ -1,11 +1,11 @@
 {
     "name": "得间小说",
     "url": "www.idejian.com",
-    "version": 103,
+    "version": 104,
     "search": {
         "url": "https://www.idejian.com/search?keyword=${key}",
         "list": ".main > div > ul > li",
-        "name": ".rank_bkname > a",
+        "name": ".rank_bkname",
         "author": ".author",
         "cover": ".items_l > a > img",
         "summary": ".rank_bkbrief",        
@@ -23,5 +23,75 @@
     },
     "chapter": {
         "content": ".bodytext"
-    }
+    },
+    "rank": [
+        {
+            "title":"[男频]人气热读榜",
+            "url": "https://www.idejian.com/bangdan/36001",
+            "list":".rank_rig > div > ul > li"
+        },
+        {
+            "title":"[男频]小说点击榜",
+            "url": "https://www.idejian.com/bangdan/36002?pageNum=$&page=${page}",
+            "page": 1,
+            "size": 20,            
+            "list":".rank_rig > div > ul > li"
+        },
+        {
+            "title":"[男频]小说收藏榜",
+            "url": "https://www.idejian.com/bangdan/36003?pageNum=$&page=${page}",
+            "page": 1,
+            "size": 20,            
+            "list":".rank_rig > div > ul > li"
+        },
+        {
+            "title":"[男频]新书潜力榜",
+            "url": "https://www.idejian.com/bangdan/36004?pageNum=$&page=${page}",
+            "page": 1,
+            "size": 20,            
+            "list":".rank_rig > div > ul > li"
+        },
+        {
+            "title":"[男频]小说完本榜",
+            "url": "https://www.idejian.com/bangdan/36007?pageNum=$&page=${page}",
+            "page": 1,
+            "size": 20,            
+            "list":".rank_rig > div > ul > li"
+        },
+        {
+            "title":"[女频]人气热读榜",
+            "url": "https://www.idejian.com/bangdan/36014?pageNum=$&page=${page}",
+            "page": 1,
+            "size": 20,   
+            "list":".rank_rig > div > ul > li"
+        },
+        {
+            "title":"[女频]小说点击榜",
+            "url": "https://www.idejian.com/bangdan/36015?pageNum=$&page=${page}",
+            "page": 1,
+            "size": 20,            
+            "list":".rank_rig > div > ul > li"
+        },
+        {
+            "title":"[女频]小说收藏榜",
+            "url": "https://www.idejian.com/bangdan/36016?pageNum=$&page=${page}",
+            "page": 1,
+            "size": 20,            
+            "list":".rank_rig > div > ul > li"
+        },
+        {
+            "title":"[女频]新书潜力榜",
+            "url": "https://www.idejian.com/bangdan/36017?pageNum=$&page=${page}",
+            "page": 1,
+            "size": 20,            
+            "list":".rank_rig > div > ul > li"
+        },
+        {
+            "title":"[女频]小说完本榜",
+            "url": "https://www.idejian.com/bangdan/36021?pageNum=$&page=${page}",
+            "page": 1,
+            "size": 20,            
+            "list":".rank_rig > div > ul > li"
+        }        
+    ]   
 }
