@@ -1,0 +1,26 @@
+{
+    "name": "笔趣阁",
+    "url": "www.biqudu.net",
+    "version": 100,
+    "search": {
+        "url": "https://www.biqudu.net/searchbook.php?keyword=${key}",
+        "list": "#hotcontent > div > div",
+        "name": "dt > a",
+        "author": "span",
+        "cover": "img",
+        "summary": "dd",        
+        "detail": "dt > a"
+    },
+    "detail": {
+        "update": "#info > p:nth-child(4)@match->(?<=·最后更新)(.+)",
+        "lastChapter": "#info > p:nth-child(5)@match->(?<=·最新章节)(.+)"
+    },
+    "catalog": {
+        "list": "dd:nth-child(n+14)",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}
