@@ -27,7 +27,9 @@
     "rank": [
         {
             "title":"[男频]人气热读榜",
-            "url": "https://www.idejian.com/bangdan/36001",
+            "url": "https://www.idejian.com/bangdan/36001?pageNum=$&page=${page}",
+            "page": 1,
+            "size": 20,         
             "list":".rank_rig > div > ul > li"
         },
         {
