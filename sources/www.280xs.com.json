@@ -1,0 +1,27 @@
+{
+    "name": "顶点小说",
+    "url": "www.280xs.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.280xs.com/searchbook.php?search_key=${key}",
+        "list": "#li1",
+        "name": "strong",
+        "author": "span:nth-child(3)@match->(?<=·作者)(.+)",
+        "cover": "img",
+        "summary": "p",        
+        "detail": "strong > a"
+    },
+    "detail": {
+        "status": "p:nth-child(5)@match->(?<=·连载完成)(.+)",
+        "update": "p.s@match->(?<=·更新时间)(.+)",
+        "lastChapter": ".info > span@match->(?<=·最新章节)(.+)"             
+    },
+    "catalog": {
+        "list": ".article > div > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#book_text>p"
+    }
+}
