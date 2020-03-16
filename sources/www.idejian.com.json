@@ -1,7 +1,7 @@
 {
     "name": "得间小说",
     "url": "www.idejian.com",
-    "version": 105,
+    "version": 106,
     "search": {
         "url": "https://www.idejian.com/search?keyword=${key}",
         "list": ".main > div > ul > li",
