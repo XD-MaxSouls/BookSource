@@ -1,12 +1,12 @@
 {
     "name": "顶点小说",
     "url": "www.280xs.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://www.280xs.com/searchbook.php?search_key=${key}",
         "list": "#li1",
         "name": "strong",
-        "author": "span:nth-child(3)@match->(?<=·作者)(.+)",
+        "author": "span:nth-child(3)@match->(?<=作者：).+",
         "cover": "img",
         "summary": "p",        
         "detail": "strong > a"
