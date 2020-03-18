@@ -1,7 +1,7 @@
 {
     "name": "E小说",
     "url": "www.zwda.com",
-    "version": 104,
+    "version": 105,
     "search": {
         "url": "https://www.zwda.com/search.php?keyword=${key}",
         "list": ".result-list > div",
@@ -12,9 +12,9 @@
         "detail": "h3 > a"
     },
     "detail": {
-        "status": "#info > p:nth-child(3)@match->(?<=·连载)(.+)",
-        "update": "#info > p:nth-child(4)@match->(?<=·最后更新)(.+)",
-        "lastChapter": "#info > p:nth-child(5)@match->(?<=·最新章节)(.+)"
+        "status": "#info > p:nth-child(3)",
+        "update": "#info > p:nth-child(4)@match->(?<=最后更新：).+",
+        "lastChapter": "#info > p:nth-child(5)"
     },
     "catalog": {
         "list": "#list > dl > dd",
