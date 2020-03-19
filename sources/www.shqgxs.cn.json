@@ -1,0 +1,26 @@
+{
+    "name": "书趣阁",
+    "url": "www.shqgxs.cn",
+    "version": 100,
+    "search": {
+        "url": "http://www.shqgxs.cn/search/result.html?searchkey=${key}",
+        "list": ".w-left > div > div.body > ul > li",
+        "name": ".info > span:nth-child(1) > a",
+        "author": ".info > span:nth-child(2) > a",
+        "cover": ".pt-ll-l > a > img",        
+        "summary": ".intro",
+        "detail": ".info > span:nth-child(1) > a"
+    },
+    "detail": {           
+        "update": ".novelinfo-l > ul > li:nth-child(7)@match->(?<=更新：).+",
+        "lastChapter": ".novelinfo-l > ul > li:nth-child(6)"
+    },
+    "catalog": {
+        "list": ".fulldir > div.body > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#chaptercontent > p" 
+    }
+}
