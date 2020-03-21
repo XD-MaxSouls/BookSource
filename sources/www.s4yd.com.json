@@ -1,0 +1,27 @@
+{
+    "name": "盛世阅读网",
+    "url": "www.s4yd.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.s4yd.com/site/search?w=${key}",
+        "list": ".lists-box > div",
+        "name": ".tit > p > a",
+        "author": ".author > a",
+        "cover": ".pic > a > img",
+        "summary": ".desc",
+        "detail": ".tit > p > a"
+    },
+    "detail": {
+        "status": "li:nth-child(12)@match->(?<=连载状态：).+",
+        "lastChapter": ".latest > h3 > a",
+        "catalog": ".latest > div > a:nth-child(2)"
+    },
+    "catalog": {
+        "list": ".cell-items > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content > p"
+    }
+}
