@@ -1,7 +1,7 @@
 {
     "name": "有毒小说",
     "url": "www.youdubook.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://www.youdubook.com/booklibrary/index/str/0_0_0_0_0_0_0_${key}",
         "list": ".BooklibraryList > ul > li",
@@ -96,6 +96,18 @@
             "author": ".nicheng",
             "cover": "li > a > img@attr->data-original",
             "detail": "a"
-        } 
+        },
+        {
+            "title":"分类",
+            "url": "https://www.youdubook.com/booklibrary/index/str/${key}_0_0_0_0_0_0?page=${page}",
+            "page": 1,
+            "size": 32,
+            "categories": [{"key": "0", "value": "全部"},{"key": "10", "value": "克苏鲁"},{"key": "6", "value": "西幻传说"},{"key": "3", "value": "东方奇幻"},{"key": "2", "value": "游戏异界"},{"key": "9", "value": "科幻时空"},{"key": "8", "value": "都市逸闻"},{"key": "7", "value": "历史军事"}],
+            "list":".BooklibraryList > ul > li:not([class~=clear])",
+            "name": "span",
+            "author": ".nickname",
+            "cover": "em > img@attr->data-original",
+            "detail": "span > a"
+        }
     ]
 }
