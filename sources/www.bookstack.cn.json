@@ -1,0 +1,147 @@
+{
+    "name": "书栈网",
+    "url": "www.bookstack.cn",
+    "version": 100,
+    "search": {
+        "url": "https://www.bookstack.cn/search/result?wd=${key}",
+        "list": "ul:nth-child(3) > li",
+        "name": "h4",
+        "cover": ".col-xs-3 > a > img",
+        "summary": ".book-description",
+        "detail": ".col-xs-3 > a"
+    },
+    "detail": {
+        "author": ".col-xs-6 > ul > li:nth-child(6) > a"
+    },
+    "catalog": {
+        "list": ".container > div:nth-child(2) > div > div > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#page-content"
+    },
+    "rank": [
+        {
+            "title":"前端",
+            "url": "https://www.bookstack.cn/explore?page=${page}&tab=latest&cid=${key}",
+            "page": 1,
+            "size": 24,
+            "categories": [{"key":"108","value":"小程序"},{"key":"181","value":"百度小程序"},{"key":"22","value":"Angular"},{"key":"176","value":"Ant Design"},{"key":"148","value":"Babel"},{"key":"24","value":"Bootstrap"},{"key":"122","value":"Chart.js"},{"key":"24","value":"CSS3"},{"key":"118","value":"Echarts"},{"key":"123","value":"Electron"},{"key":"179","value":"G2"},{"key":"114","value":"Gulp"},{"key":"113","value":"Highcharts"},{"key":"17","value":"HTML/CSS"},{"key":"19","value":"HTML5"},{"key":"18","value":"JavaScript"},{"key":"25","value":"JQuery"},{"key":"23","value":"React"},{"key":"116","value":"Sass"},{"key":"81","value":"TypeScript"},{"key":"21","value":"Vue.js"},{"key":"112","value":"Webpack"},{"key":"111","value":"Yarn"},{"key":"26","value":"前端工具"},{"key":"185","value":"图表"}],
+            "list": "div:nth-child(3) > div > div:not([class~=clearfix])",
+            "name": "dd",
+            "cover": "dt > a > img",
+            "detail": "dd > a"
+        },
+        {
+            "title":"后端",
+            "url": "https://www.bookstack.cn/explore?page=${page}&tab=latest&cid=${key}",
+            "page": 1,
+            "size": 24,
+            "categories": [{"key":"83","value":".NET"},{"key":"28","value":"C/C++"},{"key":"27","value":"C#"},{"key":"141","value":"Dart"},{"key":"169","value":"Django"},{"key":"98","value":"Erlang"},{"key":"168","value":"Gin"},{"key":"10","value":"Go"},{"key":"11","value":"Java"},{"key":"104","value":"Julia"},{"key":"85","value":"Lua"},{"key":"178","value":"Matplotlib"},{"key":"131","value":"nim"},{"key":"80","value":"Node.js"},{"key":"12","value":"PHP"},{"key":"13","value":"Python"},{"key":"29","value":"Ruby"},{"key":"30","value":"Rust"},{"key":"119","value":"R语言"},{"key":"79","value":"Scala"},{"key":"90","value":"Shell"},{"key":"125","value":"Vlang"},{"key":"133","value":"Zephir"}],            
+            "list": "div:nth-child(3) > div > div:not([class~=clearfix])",
+            "name": "dd",
+            "cover": "dt > a > img",
+            "detail": "dd > a"
+        },
+        {
+            "title":"移动端",
+            "url": "https://www.bookstack.cn/explore?page=${page}&tab=latest&cid=${key}",
+            "page": 1,
+            "size": 24,
+            "categories": [{"key":"31","value":"Android"},{"key":"109","value":"Flutter"},{"key":"151","value":"Hippy"},{"key":"37","value":"Ionic"},{"key":"32","value":"iOS"},{"key":"87","value":"kotlin"},{"key":"34","value":"Object-C"},{"key":"103","value":"PWA"},{"key":"36","value":"React Native"},{"key":"33","value":"Swift"},{"key":"152","value":"uni-app"},{"key":"35","value":"Weex"}],
+            "list": "div:nth-child(3) > div > div:not([class~=clearfix])",
+            "name": "dd",
+            "cover": "dt > a > img",
+            "detail": "dd > a"
+        },
+        {
+            "title":"数据库",
+            "url": "https://www.bookstack.cn/explore?page=${page}&tab=latest&cid=${key}",
+            "page": 1,
+            "size": 24,
+            "categories": [{"key":"129","value":"ArangoDB"},{"key":"110","value":"CouchDB"},{"key":"40","value":"DB2"},{"key":"130","value":"etcd"},{"key":"138","value":"HugeGraph"},{"key":"62","value":"InfluxDB"},{"key":"120","value":"Key-Value 数据库"},{"key":"153","value":"KitDB"},{"key":"174","value":"LevelDB"},{"key":"39","value":"MongoDB"},{"key":"38","value":"MySQL"},{"key":"139","value":"Nebula Graph"},{"key":"76","value":"NoSQL"},{"key":"166","value":"PostgreSQL"},{"key":"127","value":"PrestoDB"},{"key":"42","value":"Redis"},{"key":"134","value":"RocksDB"},{"key":"137","value":"SequoiaDB"},{"key":"43","value":"SQLite"},{"key":"126","value":"TiDB"},{"key":"173","value":"TiKV"},{"key":"175","value":"YugabyteDB"},{"key":"75","value":"关系型数据库"},{"key":"171","value":"数据库ORM"},{"key":"172","value":"数据库中间件"},{"key":"74","value":"时序数据库"}],
+            "list": "div:nth-child(3) > div > div:not([class~=clearfix])",
+            "name": "dd",
+            "cover": "dt > a > img",
+            "detail": "dd > a"            
+        },
+        {
+            "title":"云计算&大数据",
+            "url": "https://www.bookstack.cn/explore?page=${page}&tab=latest&cid=${key}",
+            "page": 1,
+            "size": 24,
+            "categories": [{"key":"184","value":"Choerodon"},{"key":"64","value":"Docker"},{"key":"145","value":"Drill"},{"key":"149","value":"Envoy"},{"key":"135","value":"Flink"},{"key":"65","value":"Hadoop"},{"key":"136","value":"Helm"},{"key":"100","value":"Kafka"},{"key":"107","value":"Kubernetes"},{"key":"183","value":"KubeSphere"},{"key":"146","value":"Libcloud"},{"key":"167","value":"Linkerd"},{"key":"182","value":"OpenPitrix"},{"key":"63","value":"OpenStack"},{"key":"180","value":"PyTorch"},{"key":"177","value":"Scikit-learn"},{"key":"66","value":"Spark"},{"key":"67","value":"Storm"},{"key":"128","value":"云原生"},{"key":"59","value":"人工智能"},{"key":"89","value":"区块链"},{"key":"84","value":"数据挖掘"},{"key":"58","value":"机器学习"},{"key":"117","value":"深度学习"},{"key":"93","value":"算法工程"},{"key":"115","value":"边缘计算"}],            
+            "list": "div:nth-child(3) > div > div:not([class~=clearfix])",
+            "name": "dd",
+            "cover": "dt > a > img",
+            "detail": "dd > a"    
+        },
+        {
+            "title":"网络&系统&运维",
+            "url": "https://www.bookstack.cn/explore?page=${page}&tab=latest&cid=${key}",
+            "page": 1,
+            "size": 24,
+            "categories": [{"key":"142","value":"Ansible"},{"key":"71","value":"Apache"},{"key":"144","value":"Ceph"},{"key":"132","value":"HAProxy"},{"key":"121","value":"Istio"},{"key":"143","value":"Jenkins"},{"key":"50","value":"Linux"},{"key":"51","value":"Mac"},{"key":"70","value":"Nginx"},{"key":"147","value":"traefik"},{"key":"52","value":"Unix"},{"key":"53","value":"Windows"},{"key":"150","value":"Zipkin"},{"key":"88","value":"安全"},{"key":"73","value":"监控"},{"key":"101","value":"系统内核"},{"key":"91","value":"网络"}],
+            "list": "div:nth-child(3) > div > div:not([class~=clearfix])",
+            "name": "dd",
+            "cover": "dt > a > img",
+            "detail": "dd > a"
+        },
+        {
+            "title":"UI&美工&设计",
+            "url": "https://www.bookstack.cn/explore?page=${page}&tab=latest&cid=${key}",
+            "page": 1,
+            "size": 24,
+            "categories": [{"key":"170","value":"Blender"},{"key":"105","value":"Sketch"},{"key":"94","value":"UI"},{"key":"96","value":"设计"}],            
+            "list": "div:nth-child(3) > div > div:not([class~=clearfix])",
+            "name": "dd",
+            "cover": "dt > a > img",
+            "detail": "dd > a"    
+        },
+        {
+            "title":"游戏开发",
+            "url": "https://www.bookstack.cn/explore?page=${page}&tab=latest&cid=${key}",
+            "page": 1,
+            "size": 24,
+            "categories": [{"key":"44","value":"COCOS"},{"key":"47","value":"H5小游戏"},{"key":"45","value":"Unity"},{"key":"97","value":"游戏引擎"}],
+            "list": "div:nth-child(3) > div > div:not([class~=clearfix])",
+            "name": "dd",
+            "cover": "dt > a > img",
+            "detail": "dd > a"
+        },
+        {
+            "title":"硬件&物联网",
+            "url": "https://www.bookstack.cn/explore?page=${page}&tab=latest&cid=${key}",
+            "page": 1,
+            "size": 24,
+            "categories": [{"key":"82","value":"智能硬件"},{"key":"106","value":"物联网"}],
+            "list": "div:nth-child(3) > div > div:not([class~=clearfix])",
+            "name": "dd",
+            "cover": "dt > a > img",
+            "detail": "dd > a"            
+        },
+        {
+            "title":"产品&运营&IDE",
+            "url": "https://www.bookstack.cn/explore?page=${page}&tab=latest&cid=${key}",
+            "page": 1,
+            "size": 24,
+            "categories": [{"key":"77","value":"IDE"},{"key":"54","value":"SEO"},{"key":"99","value":"产品文档"},{"key":"92","value":"测试"},{"key":"86","value":"版本管理"}],            
+            "list": "div:nth-child(3) > div > div:not([class~=clearfix])",
+            "name": "dd",
+            "cover": "dt > a > img",
+            "detail": "dd > a"    
+        },
+        {
+            "title":"心灵鸡汤&必杀技",
+            "url": "https://www.bookstack.cn/explore?page=${page}&tab=latest&cid=${key}",
+            "page": 1,
+            "size": 24,
+            "categories": [{"key":"55","value":"代码规范"},{"key":"78","value":"涨姿势"},{"key":"56","value":"面试笔试"}],
+            "list": "div:nth-child(3) > div > div:not([class~=clearfix])",
+            "name": "dd",
+            "cover": "dt > a > img",
+            "detail": "dd > a"
+        }    
+    ]
+}
