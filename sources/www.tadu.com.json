@@ -1,7 +1,7 @@
 {
     "name": "塔读小说",
     "url": "www.tadu.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "http://www.tadu.com/search@post->query=${key}",
         "list": ".left > ul > li",
@@ -24,13 +24,6 @@
     },
     "chapter": {
         "content": "$.content"
-    },
-    "auth": {
-        "login": "http://www.tadu.com/v3/relogin",
-        "cookie": "tadu.com",
-        "verify": "http://www.tadu.com/tadu/space/reader",
-        "logged": ".clearfix > div > div.suspend > a.exit@equal->退出",
-        "vip": ".vip_details > h4@equal->本节为VIP章节，立即订阅畅享精彩内容"
     },
     "rank": [
         {
