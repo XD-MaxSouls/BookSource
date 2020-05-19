@@ -1,9 +1,9 @@
 {
     "name": "博恩国学网",
-    "url": "guoxue.beund.com",
+    "url": "www.beund.com",
     "version": 100,
     "search": {
-        "url": "http://guoxue.beund.com/novel/search/search_1_${key}_1.html",
+        "url": "http://www.beund.com/novel/search/search_1_${key}_1.html",
         "list": ".search-tab > div",
         "name": "h2",
         "author": ".se-result-infos > div.bookinfo > a:nth-child(1)",
@@ -27,7 +27,7 @@
     "rank": [
         {
             "title":"全部",
-            "url": "http://guoxue.beund.com/novel/list/list_0_${page}.html",
+            "url": "http://www.beund.com/novel/list/list_0_${page}.html",
             "page": 1,
             "size": 20,
             "list": ".store_collist > div:not([class~=dotline])",
@@ -39,7 +39,7 @@
         },
         {
             "title":"经部",
-            "url": "http://guoxue.beund.com/novel/rankings/rank_1_${page}_0_0_0_0_0_0_0.html",
+            "url": "http://www.beund.com/novel/rankings/rank_1_${page}_0_0_0_0_0_0_0.html",
             "page": 1,
             "size": 20,         
             "list": ".store_collist > div:not([class~=dotline])",
@@ -51,7 +51,7 @@
         },
         {
             "title":"史部",
-            "url": "http://guoxue.beund.com/novel/rankings/rank_2_${page}_0_0_0_0_0_0_0.html",
+            "url": "http://www.beund.com/novel/rankings/rank_2_${page}_0_0_0_0_0_0_0.html",
             "page": 1,
             "size": 20,
             "list": ".store_collist > div:not([class~=dotline])",
@@ -63,7 +63,7 @@
         },
         {
             "title":"子部",
-            "url": "http://guoxue.beund.com/novel/rankings/rank_3_${page}_0_0_0_0_0_0_0.html",
+            "url": "http://www.beund.com/novel/rankings/rank_3_${page}_0_0_0_0_0_0_0.html",
             "page": 1,
             "size": 20,
             "list": ".store_collist > div:not([class~=dotline])",
@@ -75,7 +75,7 @@
         },
         {
             "title":"集部",
-            "url": "http://guoxue.beund.com/novel/rankings/rank_4_1_0_0_0_0_0_0_0.html",
+            "url": "http://www.beund.com/novel/rankings/rank_4_1_0_0_0_0_0_0_0.html",
             "list": ".store_collist > div:not([class~=dotline])",
             "name": ".bookname",
             "author": ".bookilnk > a:nth-child(1)",
@@ -85,7 +85,7 @@
         },
         {
             "title":"小说",
-            "url": "http://guoxue.beund.com/novel/rankings/rank_5_1_0_0_0_0_0_0_0.html",
+            "url": "http://www.beund.com/novel/rankings/rank_5_1_0_0_0_0_0_0_0.html",
             "list": ".store_collist > div:not([class~=dotline])",
             "name": ".bookname",
             "author": ".bookilnk > a:nth-child(1)",
@@ -95,7 +95,7 @@
         },
         {
             "title":"中医",
-            "url": "http://guoxue.beund.com/novel/rankings/rank_6_1_0_0_0_0_0_0_0.html",        
+            "url": "http://www.beund.com/novel/rankings/rank_6_1_0_0_0_0_0_0_0.html",        
             "list": ".store_collist > div:not([class~=dotline])",
             "name": ".bookname",
             "author": ".bookilnk > a:nth-child(1)",
@@ -105,7 +105,7 @@
         },
         {
             "title":"佛经",
-            "url": "http://guoxue.beund.com/novel/rankings/rank_7_${page}_0_0_0_0_0_0_0.html",
+            "url": "http://www.beund.com/novel/rankings/rank_7_${page}_0_0_0_0_0_0_0.html",
             "page": 1,
             "size": 20,
             "list": ".store_collist > div:not([class~=dotline])",
@@ -117,7 +117,7 @@
         },
         {
             "title":"书苑",
-            "url": "http://guoxue.beund.com/novel/rankings/rank_8_1_0_0_0_0_0_0_0.html",
+            "url": "http://www.beund.com/novel/rankings/rank_8_1_0_0_0_0_0_0_0.html",
             "list": ".store_collist > div:not([class~=dotline])",
             "name": ".bookname",
             "author": ".bookilnk > a:nth-child(1)",
@@ -127,7 +127,7 @@
         },
         {
             "title":"传记",
-            "url": "http://guoxue.beund.com/novel/rankings/rank_9_1_0_0_0_0_0_0_0.html",
+            "url": "http://www.beund.com/novel/rankings/rank_9_1_0_0_0_0_0_0_0.html",
             "list": ".store_collist > div:not([class~=dotline])",
             "name": ".bookname",
             "author": ".bookilnk > a:nth-child(1)",
@@ -137,7 +137,7 @@
         },
         {
             "title":"集部",
-            "url": "http://guoxue.beund.com/novel/rankings/rank_57_${page}_0_0_0_0_0_0_0.html",
+            "url": "http://www.beund.com/novel/rankings/rank_57_${page}_0_0_0_0_0_0_0.html",
             "page": 1,
             "size": 20,
             "list": ".store_collist > div:not([class~=dotline])",
