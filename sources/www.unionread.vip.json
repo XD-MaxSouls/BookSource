@@ -1,0 +1,169 @@
+{
+    "name": "联合阅读",
+    "url": "www.unionread.vip",
+    "version": 100,
+    "search": {
+        "url": "http://www.unionread.vip/module/novel/search.php?key=${key}",
+        "list": ".mod_all_cata_wr > ul > li",
+        "name": "h4",
+        "cover": "a > img",
+        "detail": "h4 > a"
+    },
+    "detail": {
+        "author": ".first > em",
+        "summary": ".ui-text-gray9",
+        "status": ".works-intro-status",
+        "update": ".ui-text-gray6",
+        "lastChapter": ".works-intro-text > a"
+    },
+    "catalog": {
+        "list": "ol > li > p",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#contentInner > p"
+    },
+    "rank": [
+        {
+            "title":"全部",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=0&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"玄幻",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=1&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"仙侠",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=2&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"都市",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=3&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"历史",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=4&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"科幻",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=5&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"奇幻",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=6&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"军事",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=7&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"悬疑",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=11&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"游戏",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=13&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"体育",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=12&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"武侠",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=14&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        }, 
+        {
+            "title":"二次元",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=9&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"女生频道",
+            "url": "http://www.unionread.vip/module/novel/type.php?tid=10&&page=${page}",
+            "page": 1,
+            "list":".ret-search-result > ul > li",
+            "name": "h3",
+            "cover": "a > img",
+            "summary": ".ret-works-decs",
+            "detail": "h3 > a"
+        }                       
+    ]
+}
