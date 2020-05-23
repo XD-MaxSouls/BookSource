@@ -1,0 +1,49 @@
+{
+    "name": "百合会",
+    "url": "www.yamibo.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.yamibo.com/search/novel?SearchForm%5Bkeyword%5D=${key}",
+        "list": "#w0 > table > tbody > tr",
+        "name": "td:nth-child(2)",
+        "author": "td:nth-child(3)",
+        "detail": "td:nth-child(2) > a"
+    },
+    "detail": {
+        "cover": ".col-md-3 > img",
+        "summary": "#w0-collapse1 > div",
+        "status": ".col-md-9 > p:nth-child(2)@match->(?<=作品状态：).+",
+        "update": ".col-md-9 > p:nth-child(4)@match->(?<=更新时间：).+",
+        "lastChapter": ".bk_detail > div > div > a"
+    },
+    "catalog": {
+        "list": "div.col-xs-6",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".panel-body > p"
+    },
+    "rank": [
+        {
+            "title":"全部作品",
+            "url": "https://www.yamibo.com/novel/list?page=${page}",
+            "page": 1          
+        },        
+        {
+            "title":"原创小说",
+            "url": "https://www.yamibo.com/novel/list?q=1&page=${page}",
+            "page": 1          
+        },
+        {
+            "title":"二次元同人",
+            "url": "https://www.yamibo.com/novel/list?q=2&page=${page}",
+            "page": 1
+        },
+        {
+            "title":"三次元同人",
+            "url": "https://www.yamibo.com/novel/list?q=3&page=${page}",
+            "page": 1
+        }
+    ]
+}
