@@ -1,0 +1,247 @@
+{
+    "name": "九九藏书网",
+    "url": "www.99csw.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.99csw.com/book/search.php?s=13139900387823019677&type=站内&q=${key}",
+        "list": "#right > ul > li",
+        "name": "h2",
+        "author": "h4:nth-child(3)@match->(?<=作者:).+",
+        "cover": "a > img",
+        "summary": ".intro",
+        "detail": "h2 > a"
+    },
+    "detail": {
+        "name": "h2",
+        "author": "h4:nth-child(4)@match->(?<=作者:).+",
+        "cover": "#book_info > img",
+        "summary": ".intro"
+    },
+    "catalog": {
+        "list": "#dir > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    },
+    "rank": [
+        {
+            "title":"轻小说",
+            "url": "http://www.99csw.com/book/index.php?type=轻小说&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"     
+        },
+        {
+            "title":"作品集",
+            "url": "http://www.99csw.com/book/index.php?type=作品集&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"        
+        },
+        {
+            "title":"传记回忆",
+            "url": "http://www.99csw.com/book/index.php?type=传记回忆&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"英文读本",
+            "url": "http://www.99csw.com/book/index.php?type=英文读本&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"     
+        },
+        {
+            "title":"杂文随笔",
+            "url": "http://www.99csw.com/book/index.php?type=杂文随笔&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"        
+        },
+        {
+            "title":"言情小说",
+            "url": "http://www.99csw.com/book/index.php?type=言情小说&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"历史小说",
+            "url": "http://www.99csw.com/book/index.php?type=历史小说&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"侦探推理",
+            "url": "http://www.99csw.com/book/index.php?type=侦探推理&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"     
+        },
+        {
+            "title":"惊悚悬疑",
+            "url": "http://www.99csw.com/book/index.php?type=惊悚悬疑&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"        
+        },
+        {
+            "title":"网络玄幻",
+            "url": "http://www.99csw.com/book/index.php?type=网络玄幻&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"寓言童话",
+            "url": "http://www.99csw.com/book/index.php?type=寓言童话&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"青春都市",
+            "url": "http://www.99csw.com/book/index.php?type=青春都市&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"     
+        },
+        {
+            "title":"社会心理",
+            "url": "http://www.99csw.com/book/index.php?type=社会心理&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"        
+        },
+        {
+            "title":"外国小说",
+            "url": "http://www.99csw.com/book/index.php?type=外国小说&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"科幻小说",
+            "url": "http://www.99csw.com/book/index.php?type=科幻小说&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"当代小说",
+            "url": "http://www.99csw.com/book/index.php?type=当代小说&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"     
+        },
+        {
+            "title":"武侠小说",
+            "url": "http://www.99csw.com/book/index.php?type=武侠小说&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"        
+        },
+        {
+            "title":"纪实报告",
+            "url": "http://www.99csw.com/book/index.php?type=纪实报告&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"世界历史",
+            "url": "http://www.99csw.com/book/index.php?type=世界历史&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"中国历史",
+            "url": "http://www.99csw.com/book/index.php?type=中国历史&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"     
+        },
+        {
+            "title":"科普学习",
+            "url": "http://www.99csw.com/book/index.php?type=科普学习&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"        
+        },
+        {
+            "title":"诗歌戏曲",
+            "url": "http://www.99csw.com/book/index.php?type=诗歌戏曲&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"宗教哲学",
+            "url": "http://www.99csw.com/book/index.php?type=宗教哲学&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"文学理论",
+            "url": "http://www.99csw.com/book/index.php?type=文学理论&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"     
+        },
+        {
+            "title":"日语读物",
+            "url": "http://www.99csw.com/book/index.php?type=日语读物&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"        
+        },
+        {
+            "title":"战争军事",
+            "url": "http://www.99csw.com/book/index.php?type=战争军事&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"政治经济",
+            "url": "http://www.99csw.com/book/index.php?type=政治经济&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"古典文学",
+            "url": "http://www.99csw.com/book/index.php?type=古典文学&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"     
+        },
+        {
+            "title":"现代小说",
+            "url": "http://www.99csw.com/book/index.php?type=现代小说&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"        
+        },
+        {
+            "title":"官场小说",
+            "url": "http://www.99csw.com/book/index.php?type=官场小说&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        },
+        {
+            "title":"国学/古籍",
+            "url": "http://www.99csw.com/book/index.php?type=国学/古籍&page=${page}",
+            "page": 1,
+            "list":"#list_box > li",
+            "author": ".author@match->(?<=作者:).+"    
+        }                                                
+    ]
+}
