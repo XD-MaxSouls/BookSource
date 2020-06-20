@@ -1,9 +1,9 @@
 {
-    "name": "联合阅读",
-    "url": "www.unionread.vip",
+    "name": "息壤中文网",
+    "url": "www.xrzww.com",
     "version": 100,
     "search": {
-        "url": "http://www.unionread.vip/module/novel/search.php?key=${key}",
+        "url": "https://www.xrzww.com/module/novel/search.php?key=${key}",
         "list": ".mod_all_cata_wr > ul > li",
         "name": "h4",
         "cover": "a > img",
@@ -27,7 +27,7 @@
     "rank": [
         {
             "title":"全部",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=0&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=0&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -37,7 +37,7 @@
         },
         {
             "title":"玄幻",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=1&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=1&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -47,7 +47,7 @@
         },
         {
             "title":"仙侠",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=2&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=2&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -57,7 +57,7 @@
         },
         {
             "title":"都市",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=3&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=3&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -67,7 +67,7 @@
         },
         {
             "title":"历史",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=4&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=4&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -77,7 +77,7 @@
         },
         {
             "title":"科幻",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=5&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=5&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -87,7 +87,7 @@
         },
         {
             "title":"奇幻",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=6&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=6&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -97,7 +97,7 @@
         },
         {
             "title":"军事",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=7&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=7&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -107,7 +107,7 @@
         },
         {
             "title":"悬疑",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=11&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=11&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -117,7 +117,7 @@
         },
         {
             "title":"游戏",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=13&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=13&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -127,7 +127,7 @@
         },
         {
             "title":"体育",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=12&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=12&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -137,7 +137,7 @@
         },
         {
             "title":"武侠",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=14&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=14&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -147,7 +147,7 @@
         }, 
         {
             "title":"二次元",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=9&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=9&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
@@ -157,7 +157,7 @@
         },
         {
             "title":"女生频道",
-            "url": "http://www.unionread.vip/module/novel/type.php?tid=10&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=10&&page=${page}",
             "page": 1,
             "list":".ret-search-result > ul > li",
             "name": "h3",
