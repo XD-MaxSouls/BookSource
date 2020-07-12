@@ -1,0 +1,26 @@
+{
+    "name": "次元猫",
+    "url": "www.ciymao.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.ciymao.com/search/@post->key=${key}",
+        "charset": "gbk",
+        "list": "ul > li",
+        "name": ".bookname > a:nth-child(1)",
+        "author": ".author",
+        "detail": ".bookname > a:nth-child(1)"
+    },
+    "detail": {
+        "summary": ".book-dec",
+        "status": ".state",
+        "lastChapter": ".link-group"
+    },
+    "catalog": {
+        "list": ".chapter-list > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content > p"
+    }
+}
