@@ -1,16 +1,18 @@
 {
     "name": "次元猫",
     "url": "www.ciymao.com",
-    "version": 100,
+    "version": 101,
     "search": {
-        "url": "https://www.ciymao.com/search/@post->key=${key}",
+        "url": "https://www.ciymao.com/search/?key=${key}",
         "charset": "gbk",
-        "list": "ul > li",
+        "list": ".main_con > li",
         "name": ".bookname > a:nth-child(1)",
         "author": ".author",
         "detail": ".bookname > a:nth-child(1)"
     },
     "detail": {
+        "name": "#book",
+        "author": "[rel=nofollow]",        
         "summary": ".book-dec",
         "status": ".state",
         "lastChapter": ".link-group"
@@ -22,5 +24,105 @@
     },
     "chapter": {
         "content": "#content > p"
-    }
+    },
+    "rank": [
+        {
+            "title":"全部",
+            "url": "https://www.ciymao.com/store/c11/z1/t0/x0/p0/y${page}/n0/s1.html",
+            "page": 1,
+            "list":".collist",
+            "name": "h3",
+            "author": "[rel=nofollow]",
+            "summary": ".bookintro",
+            "detail": "h3 > a"            
+        },
+        {
+            "title":"二次元",
+            "url": "https://www.ciymao.com/store/c20/z1/t0/x${key}/p0/y${page}/n0/s1.html",
+            "page": 1,
+            "categories": [{"key": "1", "value": "动漫同人"},{"key": "2", "value": "小说同人"},{"key": "3", "value": "影视同人"},{"key": "4", "value": "原生幻想"},{"key": "5", "value": "搞笑吐槽"}],
+            "list":".collist",
+            "name": "h3",
+            "author": "[rel=nofollow]",
+            "summary": ".bookintro",
+            "detail": "h3 > a"    
+        },
+        {
+            "title":"玄幻奇幻",
+            "url": "https://www.ciymao.com/store/c1/z1/t0/x${key}/p0/y${page}/n0/s1.html",
+            "page": 1,
+            "categories": [{"key": "1", "value": "东方玄幻"},{"key": "2", "value": "异世大陆"},{"key": "3", "value": "史诗奇幻"},{"key": "4", "value": "高武世界"},{"key": "5", "value": "剑与魔法"}],
+            "list":".collist",
+            "name": "h3",
+            "author": "[rel=nofollow]",
+            "summary": ".bookintro",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"武侠仙侠",
+            "url": "https://www.ciymao.com/store/c2/z1/t0/x0/p0/y${page}/n0/s1.html",
+            "page": 1,
+            "list":".collist",
+            "categories": [{"key": "1", "value": "古典仙侠"},{"key": "2", "value": "修真文明"},{"key": "3", "value": "现代修真"},{"key": "4", "value": "神话修真"},{"key": "5", "value": "武侠幻想"},{"key": "6", "value": "幻想修仙"}],
+            "name": "h3",
+            "author": "[rel=nofollow]",
+            "summary": ".bookintro",
+            "detail": "h3 > a"            
+        },
+        {
+            "title":"都市青春",
+            "url": "https://www.ciymao.com/store/c3/z1/t0/x${key}/p0/y${page}/n0/s1.html",
+            "page": 1,
+            "categories": [{"key": "1", "value": "都市生活"},{"key": "2", "value": "官场沉浮"},{"key": "3", "value": "娱乐明星"},{"key": "4", "value": "异术超能"}],
+            "list":".collist",
+            "name": "h3",
+            "author": "[rel=nofollow]",
+            "summary": ".bookintro",
+            "detail": "h3 > a"    
+        },
+        {
+            "title":"历史军事",
+            "url": "https://www.ciymao.com/store/c4/z1/t0/x${key}/p0/y${page}/n0/s1.html",
+            "page": 1,
+            "categories": [{"key": "1", "value": "架空历史"},{"key": "2", "value": "秦汉三国"},{"key": "3", "value": "两晋隋唐"},{"key": "4", "value": "两宋元明"},{"key": "5", "value": "清史民国"},{"key": "6", "value": "外国历史"},{"key": "7", "value": "军事战争"},{"key": "8", "value": "抗战烽火"}],
+            "list":".collist",
+            "name": "h3",
+            "author": "[rel=nofollow]",
+            "summary": ".bookintro",
+            "detail": "h3 > a"
+        },
+        {
+            "title":"科幻灵异",
+            "url": "https://www.ciymao.com/store/c5/z1/t0/x0/p0/y${page}/n0/s1.html",
+            "page": 1,
+            "categories": [{"key": "1", "value": "未来世界"},{"key": "2", "value": "超级科技"},{"key": "3", "value": "时空穿梭"},{"key": "4", "value": "进化变异"},{"key": "5", "value": "末世危机"},{"key": "6", "value": "灵异鬼怪"},{"key": "7", "value": "侦探推理"},{"key": "8", "value": "寻墓探险"}],
+            "list":".collist",
+            "name": "h3",
+            "author": "[rel=nofollow]",
+            "summary": ".bookintro",
+            "detail": "h3 > a"            
+        },
+        {
+            "title":"游戏竞技",
+            "url": "https://www.ciymao.com/store/c6/z1/t0/x${key}/p0/y${page}/n0/s1.html",
+            "page": 1,
+            "categories": [{"key": "1", "value": "虚拟网游"},{"key": "2", "value": "游戏异界"},{"key": "3", "value": "体育竞技"},{"key": "4", "value": "游戏生涯"},{"key": "5", "value": "电子竞技"}],
+            "list":".collist",
+            "name": "h3",
+            "author": "[rel=nofollow]",
+            "summary": ".bookintro",
+            "detail": "h3 > a"    
+        },
+        {
+            "title":"女生言情",
+            "url": "https://www.ciymao.com/store/c9/z1/t0/x${key}/p0/y${page}/n0/s1.html",
+            "page": 1,
+            "categories": [{"key": "1", "value": "豪门总裁"},{"key": "2", "value": "现代言情"},{"key": "3", "value": "星际科幻"},{"key": "4", "value": "灵异推理"},{"key": "5", "value": "婚恋情缘"},{"key": "6", "value": "古代言情"},{"key": "7", "value": "玄幻仙侠"},{"key": "8", "value": "宫闱宅斗"}],
+            "list":".collist",
+            "name": "h3",
+            "author": "[rel=nofollow]",
+            "summary": ".bookintro",
+            "detail": "h3 > a"
+        }                
+    ]
 }
