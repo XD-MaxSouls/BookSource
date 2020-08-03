@@ -1,20 +1,20 @@
 {
     "name": "息壤中文网",
     "url": "www.xrzww.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://www.xrzww.com/module/novel/search.php?key=${key}",
-        "list": ".mod_all_cata_wr > ul > li",
+        "list": ".mod_book_list > li",
         "name": "h4",
         "cover": "a > img",
         "detail": "h4 > a"
     },
     "detail": {
         "author": ".first > em",
-        "summary": ".ui-text-gray9",
+        "summary": ".works-intro-short",
         "status": ".works-intro-status",
         "update": ".ui-text-gray6",
-        "lastChapter": ".works-intro-text > a"
+        "lastChapter": ".works-ft-new"
     },
     "catalog": {
         "list": "ol > li > p",
@@ -22,148 +22,43 @@
         "chapter": "a"
     },
     "chapter": {
-        "content": "#contentInner > p"
+        "content": "#contentInner"
     },
     "rank": [
         {
             "title":"全部",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=0&&page=${page}",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=0&page=${page}",
             "page": 1,
-            "list":".ret-search-result > ul > li",
+            "list":".ret-search-item",
             "name": "h3",
-            "cover": "a > img",
+            "author": ".ret-works-author@attr->title",
+            "cover": ".lazy",
             "summary": ".ret-works-decs",
             "detail": "h3 > a"
         },
         {
-            "title":"玄幻",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=1&&page=${page}",
+            "title":"男频",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=${key}&page=${page}",
             "page": 1,
-            "list":".ret-search-result > ul > li",
+            "categories": [{"key": "1", "value": "玄幻"},{"key": "2", "value": "仙侠"},{"key": "3", "value": "都市"},{"key": "4", "value": "历史"},{"key": "5", "value": "科幻"},{"key": "6", "value": "奇幻"},{"key": "7", "value": "军事"},{"key": "11", "value": "悬疑"},{"key": "14", "value": "武侠"},{"key": "12", "value": "体育"},{"key": "13", "value": "游戏"},{"key": "9", "value": "轻小说"}],
+            "list":".ret-search-item",
             "name": "h3",
-            "cover": "a > img",
+            "author": ".ret-works-author@attr->title",
+            "cover": ".lazy",
             "summary": ".ret-works-decs",
             "detail": "h3 > a"
         },
         {
-            "title":"仙侠",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=2&&page=${page}",
+            "title":"女频",
+            "url": "https://www.xrzww.com/module/novel/type.php?tid=${key}&page=${page}",
             "page": 1,
-            "list":".ret-search-result > ul > li",
+            "categories": [{"key": "83", "value": "无CP"},{"key": "77", "value": "现代言情"},{"key": "80", "value": "古代言情"},{"key": "81", "value": "幻想言情"},{"key": "82", "value": "纯爱小说"}],
+            "list":".ret-search-item",
             "name": "h3",
-            "cover": "a > img",
+            "author": ".ret-works-author@attr->title",
+            "cover": ".lazy",
             "summary": ".ret-works-decs",
             "detail": "h3 > a"
-        },
-        {
-            "title":"都市",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=3&&page=${page}",
-            "page": 1,
-            "list":".ret-search-result > ul > li",
-            "name": "h3",
-            "cover": "a > img",
-            "summary": ".ret-works-decs",
-            "detail": "h3 > a"
-        },
-        {
-            "title":"历史",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=4&&page=${page}",
-            "page": 1,
-            "list":".ret-search-result > ul > li",
-            "name": "h3",
-            "cover": "a > img",
-            "summary": ".ret-works-decs",
-            "detail": "h3 > a"
-        },
-        {
-            "title":"科幻",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=5&&page=${page}",
-            "page": 1,
-            "list":".ret-search-result > ul > li",
-            "name": "h3",
-            "cover": "a > img",
-            "summary": ".ret-works-decs",
-            "detail": "h3 > a"
-        },
-        {
-            "title":"奇幻",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=6&&page=${page}",
-            "page": 1,
-            "list":".ret-search-result > ul > li",
-            "name": "h3",
-            "cover": "a > img",
-            "summary": ".ret-works-decs",
-            "detail": "h3 > a"
-        },
-        {
-            "title":"军事",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=7&&page=${page}",
-            "page": 1,
-            "list":".ret-search-result > ul > li",
-            "name": "h3",
-            "cover": "a > img",
-            "summary": ".ret-works-decs",
-            "detail": "h3 > a"
-        },
-        {
-            "title":"悬疑",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=11&&page=${page}",
-            "page": 1,
-            "list":".ret-search-result > ul > li",
-            "name": "h3",
-            "cover": "a > img",
-            "summary": ".ret-works-decs",
-            "detail": "h3 > a"
-        },
-        {
-            "title":"游戏",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=13&&page=${page}",
-            "page": 1,
-            "list":".ret-search-result > ul > li",
-            "name": "h3",
-            "cover": "a > img",
-            "summary": ".ret-works-decs",
-            "detail": "h3 > a"
-        },
-        {
-            "title":"体育",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=12&&page=${page}",
-            "page": 1,
-            "list":".ret-search-result > ul > li",
-            "name": "h3",
-            "cover": "a > img",
-            "summary": ".ret-works-decs",
-            "detail": "h3 > a"
-        },
-        {
-            "title":"武侠",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=14&&page=${page}",
-            "page": 1,
-            "list":".ret-search-result > ul > li",
-            "name": "h3",
-            "cover": "a > img",
-            "summary": ".ret-works-decs",
-            "detail": "h3 > a"
-        }, 
-        {
-            "title":"二次元",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=9&&page=${page}",
-            "page": 1,
-            "list":".ret-search-result > ul > li",
-            "name": "h3",
-            "cover": "a > img",
-            "summary": ".ret-works-decs",
-            "detail": "h3 > a"
-        },
-        {
-            "title":"女生频道",
-            "url": "https://www.xrzww.com/module/novel/type.php?tid=10&&page=${page}",
-            "page": 1,
-            "list":".ret-search-result > ul > li",
-            "name": "h3",
-            "cover": "a > img",
-            "summary": ".ret-works-decs",
-            "detail": "h3 > a"
-        }                       
+        }
     ]
 }
