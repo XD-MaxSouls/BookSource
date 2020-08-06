@@ -1,7 +1,7 @@
 {
     "name": "百合会漫画",
     "url": "m.yamibo.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://m.yamibo.com/api/search-manga?k=${key}&page=1",
         "list": "$.lists[*]",
@@ -27,10 +27,10 @@
     },
     "auth": {
         "login": "https://www.yamibo.com/user/login",
-        "cookie": "yamibo.com",
-        "verify": "https://www.yamibo.com/my/",
-        "logged": ".btn-warning@equal->充值",
-        "vip": ".text-warning@equal->当前是付费章节，需要订阅后才能继续阅读"
+        "cookie": "www.yamibo.com",
+        "verify": "https://www.yamibo.com/my",
+        "logged": ".btn-danger@equal->申请身份验证",
+        "vip": "h5@equal->当前是付费章节，需要订阅后才能继续阅读"
     },
     "rank": [
         {
