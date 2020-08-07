@@ -1,24 +1,24 @@
 {
     "name": "息壤中文网",
     "url": "www.xrzww.com",
-    "version": 102,
+    "version": 103,
     "search": {
         "url": "https://xrzww.com/module/novel/search.php?type=1&key=${key}",
         "list": ".book_piece",
         "name": ".name",
         "cover": ".img > img", 
-        "detail": ".l@attr->onclick@match->(?<=location=\').+?(?=\')"
+        "detail": ".l@attr->onclick@match->(?<=location=').+?(?=')"
     },
     "detail": {
         "author": ".infour > div:nth-child(3)@match->(?<=作者：).+",
         "summary":".intro_hidden@match->(?<=简介：).+",
         "lastChapter": ".fn13",
-        "catalog": ".mulu_i_btn@attr->onclick@match->(?<=location.href=\').+?(?=\')"
+        "catalog": ".mulu_i_btn@attr->onclick@match->(?<=location.href=').+?(?=')"
     },
     "catalog": {
 		"list": ".chapter_list > *",
         "name": ".title",
-        "chapter": ".chapter_row@attr->onclick@match->(?<=location.href=\').+?(?=\')@replace->;->&",
+        "chapter": ".chapter_row@attr->onclick@match->(?<=location.href=').+?(?=')@replace->;->&",
         "page": ".go_left > a:nth-child(2)@replace->javascript:alert('没有更多了');->info.php?tid=3&nid=623"
     },
     "chapter": {
