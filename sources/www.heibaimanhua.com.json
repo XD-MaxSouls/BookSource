@@ -1,0 +1,80 @@
+{
+    "name": "黑白漫画",
+    "url": "www.heibaimanhua.com",
+    "version": 100,
+    "search": {
+        "url": "https://m.heibaimanhua.com/?s=${key}",
+            "list":".content",
+            "name": "h2",
+            "detail": "h2 > a"
+    },
+    "detail": {
+        "status": ".logo > a@attr->title@replace->黑白漫画->连载",
+        "update": ".postclock"
+    },
+    "catalog": {
+        "list": "[rel=canonical]",
+        "name": "[rel=canonical]@replace->->1",
+        "chapter": "[rel=canonical]"
+    },
+    "chapter": {
+        "content": "#kbmhimg"
+    },
+    "rank": [
+        {
+            "title":"条漫",
+            "url": "https://m.heibaimanhua.com/tiaoman/page/${page}",
+            "page": 1
+        },
+                {
+            "title":"段子手",
+            "url": "https://m.heibaimanhua.com/duanzishou/page/${page}",
+            "page": 1
+        },
+        {
+            "title":"治愈系",
+            "url": "https://m.heibaimanhua.com/zhiyuxi/page/${page}",
+            "page": 1
+        },
+        {
+            "title":"涨姿势",
+            "url": "https://m.heibaimanhua.com/zhangzishi/page/${page}",
+            "page": 1
+        },
+                {
+            "title":"致郁系",
+            "url": "https://m.heibaimanhua.com/zhiyu/page/${page}",
+            "page": 1
+        },
+        {
+            "title":"冷知识",
+            "url": "https://m.heibaimanhua.com/lengzhishi/page/${page}",
+            "page": 1
+        },
+                {
+            "title":"恐怖漫画",
+            "url": "https://m.heibaimanhua.com/weimanhua/kbmh/page/${page}",
+            "page": 1
+        },
+        {
+            "title":"奇趣漫画",
+            "url": "https://m.heibaimanhua.com/weimanhua/qiqumanhua/page/${page}",
+            "page": 1
+        },
+                {
+            "title":"搞笑漫画",
+            "url": "https://m.heibaimanhua.com/weimanhua/gaoxiaomanhua/page/${page}",
+            "page": 1
+        },
+        {
+            "title":"漫画漫话",
+            "url": "https://m.heibaimanhua.com/weimanhua/mh/page/${page}",
+            "page": 1
+        },
+        {
+            "title":"讽刺与幽默",
+            "url": "https://m.heibaimanhua.com/fcyym/page/${page}",
+            "page": 1
+        }
+    ]
+}
