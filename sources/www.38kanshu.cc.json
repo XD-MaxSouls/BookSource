@@ -1,7 +1,7 @@
 {
     "name": "38看书",
     "url": "www.38kanshu.cc",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://m.38kanshu.cc/s.php@post->type=articlename&s=${key}&submit=",
         "charset": "gbk",
@@ -23,7 +23,7 @@
     },
     "chapter": {
         "content": ".articleCon > p",
-        "purify": ["一秒记住【38看书】提醒各位天才们谨记本站网址：www.38kanshu.com","无广告！","☆叄*=捌*看*书☆",""],
+        "purify": ["一秒记住【38看书】提醒各位天才们谨记本站网址：www.38kanshu.com","无广告！","☆叄*=捌*看*书☆","÷san∫吧∫看∫书÷","38读書小說網"],
         "page": ".page > a:nth-child(3):matches(下一页)"
     }
 }
