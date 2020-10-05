@@ -1,0 +1,259 @@
+{
+    "name": "我爱看书",
+    "url": "www.wakbook.com",
+    "version": 100,
+    "search": {
+        "charset": "gb2312"
+    },
+    "detail": {
+        "summary": "#DivTBxx",
+        "status": "li:nth-child(3) > span"
+    },
+    "catalog": {
+        "list": "li#DivBx",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".BookReadconn"
+    },
+    "rank": [
+        {
+            "title":"小说",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "1", "value": "全部"},{"key": "1b50", "value": "武侠"},{"key": "1b51", "value": "科幻"},{"key": "1b56", "value": "校园"},{"key": "1b55", "value": "言情"},{"key": "1b57", "value": "都市"},{"key": "1b58", "value": "历史"},{"key": "1b60", "value": "官场"},{"key": "1b61", "value": "商场"},{"key": "1b62", "value": "网络"},{"key": "1b63", "value": "乡土"},{"key": "1b67", "value": "影视"},{"key": "1b71", "value": "古典"},{"key": "1b72", "value": "现代"},{"key": "1b73", "value": "当代"},{"key": "1b75", "value": "外国"},{"key": "1b78", "value": "军事"},{"key": "1b271", "value": "职场"},{"key": "1b69", "value": "作品集"},{"key": "1b52", "value": "魔幻/奇幻/玄幻"},{"key": "1b53", "value": "侦探/推理/悬疑"},{"key": "1b54", "value": "恐怖/惊悚/历险"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"文学",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "4", "value": "全部"},{"key": "4b634", "value": "作品集"},{"key": "4b631", "value": "文学理论"},{"key": "4b637", "value": "纪实文学"},{"key": "4b638", "value": "诗歌词曲"},{"key": "4b639", "value": "散文随笔"},{"key": "4b642", "value": "儿童文学"},{"key": "4b645", "value": "外国文学"},{"key": "4b9406", "value": "中国文学"},{"key": "4b640", "value": "戏剧与曲艺"},{"key": "4b633", "value": "名家作品及研究"},{"key": "4b635", "value": "四大名著及研究"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"传记",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "6", "value": "全部"},{"key": "6b1026", "value": "军政界"},{"key": "6b1027", "value": "科学家"},{"key": "6b1030", "value": "艺术界"},{"key": "6b1031", "value": "文学界"},{"key": "6b1024", "value": "财经人物"},{"key": "6b1025", "value": "历代帝王"},{"key": "6b1032", "value": "群星荟萃"},{"key": "6b1033", "value": "女性风采"},{"key": "6b1034", "value": "传媒英才"},{"key": "6b1036", "value": "社会百相"},{"key": "6b1037", "value": "励志人物"},{"key": "6b1039", "value": "人物总传"},{"key": "6b1029", "value": "哲学家、思想家"},{"key": "6b1028", "value": "人文学家、社会学家"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"国学",
+            "url": "http://www.wakbook.com/Catalogue/7/",
+            "page": 1,
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"旅游",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "14", "value": "全部"},{"key": "14b2454", "value": "自助旅游"},{"key": "14b2459", "value": "旅游随笔"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"少儿",
+            "url": "http://www.wakbook.com/Catalogue/15/00000001/index_${page}.html",
+            "page": 1,
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"家庭",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "16", "value": "全部"},{"key": "16b2677", "value": "亲子"},{"key": "16b2672", "value": "家庭关系"},{"key": "16b2673", "value": "品质生活"},{"key": "16b2674", "value": "家庭保健"},{"key": "16b2676", "value": "孕产知识"},{"key": "16b2678", "value": "家庭教育"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"医学",
+            "url": "http://www.wakbook.com/Catalogue/25/",
+            "page": 1,
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"娱乐时尚",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "11", "value": "全部"},{"key": "11b2198", "value": "明星书"},{"key": "11b2189", "value": "美容美发"},{"key": "11b2190", "value": "塑形健身"},{"key": "11b2195", "value": "都市生活"},{"key": "11b2196", "value": "消遣娱乐"},{"key": "11b2197", "value": "漫话影视"},{"key": "11b2192", "value": "女子俱乐部"},{"key": "11b2201", "value": "幽默与趣味"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"婚恋与性",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "17", "value": "全部"},{"key": "17b2817", "value": "恋爱"},{"key": "17b2818", "value": "婚姻"},{"key": "17b2820", "value": "性知识"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"社会科学",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "20b3254", "value": "社会科学理论"},{"key": "20b3255", "value": "现状与发展"},{"key": "20b3258", "value": "社会调查"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"经济与管理",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "2", "value": "全部"},{"key": "2b272", "value": "管理学"},{"key": "2b273", "value": "领导学"},{"key": "2b288", "value": "经济史"},{"key": "2b274", "value": "企业管理"},{"key": "2b275", "value": "财务管理"},{"key": "2b279", "value": "市场营销"},{"key": "2b280", "value": "金融投资"},{"key": "2b282", "value": "经济理论"},{"key": "2b284", "value": "中国经济"},{"key": "2b285", "value": "世界经济"},{"key": "2b291", "value": "个人理财"},{"key": "2b299", "value": "房地产经济"},{"key": "2b292", "value": "企业与企业家"},{"key": "2b287", "value": "行业经济与管理"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"励志与成功",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "3", "value": "全部"},{"key": "3b574", "value": "成功学"},{"key": "3b580", "value": "销售人"},{"key": "3b575", "value": "自我完善"},{"key": "3b576", "value": "自我激励"},{"key": "3b577", "value": "自我调节"},{"key": "3b578", "value": "心灵鸡汤"},{"key": "3b579", "value": "人在职场"},{"key": "3b583", "value": "创业必修"},{"key": "3b584", "value": "社会交往"},{"key": "3b589", "value": "励志小品"},{"key": "3b590", "value": "女性励志"},{"key": "3b591", "value": "名人励志"},{"key": "3b587", "value": "演讲与口才"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"艺术与摄影",
+            "url": "http://www.wakbook.com/Catalogue/5/",
+            "page": 1,
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"运动与健康",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "12", "value": "全部"},{"key": "12b2281", "value": "养生"},{"key": "12b2288", "value": "两性健康"},{"key": "12b2282", "value": "常见病预防与治疗"},{"key": "12b2289", "value": "心理健康"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"政治与军事",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "18", "value": "全部"},{"key": "18b2836", "value": "政治"},{"key": "18b2837", "value": "军事"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"哲学与宗教",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "19", "value": "全部"},{"key": "19b3055", "value": "哲学"},{"key": "19b3066", "value": "宗教"},{"key": "19b3057", "value": "心理学"}],
+            "list":".Re_list1 > li",
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"科学与自然",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "23", "value": "全部"},{"key": "23b3506", "value": "科普读物"},{"key": "23b3508", "value": "自然科学总论"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"烹饪美食与酒",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "13", "value": "全部"},{"key": "13b2350", "value": "饮食文化"},{"key": "13b2356", "value": "饮食养生与美容"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"英语与其他外语",
+            "url": "http://www.wakbook.com/Catalogue/9/",
+            "page": 1,
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"考试、教材与参考书",
+            "url": "http://www.wakbook.com/Catalogue/10/",
+            "page": 1,
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        },
+        {
+            "title":"文化、教育与信息传播",
+            "url": "http://www.wakbook.com/Catalogue/${key}/00000001/index_${page}.html",
+            "page": 1,
+            "categories": [{"key": "22", "value": "全部"},{"key": "22b3361", "value": "中国文化"},{"key": "22b3362", "value": "世界及各国文化"},{"key": "22b3363", "value": "信息与传播理论"},{"key": "22b3370", "value": "教育"}],
+            "list":".Re_list1 > li",
+            "name": "#A14B > a",
+            "author": ".WorkOVERFLOW > #A12 > a:nth-child(1)",
+            "cover": "a > img",
+            "detail": "#A14B > a"
+        }
+    ]
+}
