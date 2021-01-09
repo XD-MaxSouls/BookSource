@@ -1,14 +1,17 @@
 {
     "name": "中国记忆力训练网",
-    "url": "book.jiyili.net",
+    "url": "jiyili.net",
+    "remarks": "该网站30秒内只能搜索1次资源",
     "version": 100,
     "search": {
-        "url": ""
+        "url": "http://book.jiyili.net/modules/article/search.php@post->searchtype=articlename&searchkey=${key}",
+	"charset": "gbk",
+        "list": "tr:nth-child(n+2)",
+        "name": "td:nth-child(1)",
+        "author": "td:nth-child(3)",
+        "detail": "td:nth-child(1) > a"
     },
     "detail": {
-        "name": "center > h2",
-        "author": "p:nth-child(3) > span",
-        "cover": ".moviePic > img",
         "summary": "p:nth-child(4) > span",
         "catalog": "h1 > p > a"
     },
