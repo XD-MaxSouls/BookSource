@@ -1,7 +1,7 @@
 {
     "name": "E小说",
-    "url": "www.zwda.com",
-    "version": 107,
+    "url": "zwda.com",
+    "version": 108,
     "search": {
         "url": "https://www.zwda.com/search.php?q=${key}",
         "list": ".result-list > div",
