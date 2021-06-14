@@ -68,7 +68,7 @@ const catalog = (url) => {
  */
 const chapter = (url) => {
   let res = GET(url)
-  let response = res.replace("九桃小说 老域名(9txs.com)被墙，请您牢记本站最新域名(9txs.org)","")
+  let response = res.replace("九桃小说 老域名(9txs.com)被墙，请您牢记本站最新域名(9txs.org)","").replace(/您可以在百度里搜索“.+九桃小说\(9txs.org\)”查找最新章节！/,"")
   let $ = HTML.parse(response)
   return $('#content')
 }
