@@ -34,7 +34,7 @@ const detail = (url) => {
 //目录
 const catalog = (url) => {
   let response = GET(url,{zip:"chapter.json"})
-  let $ = JSON.parse(response).data
+  let $ = JSON.parse(response)
   let array = []
    $.data.forEach(chapter => {
       array.push({
@@ -54,5 +54,5 @@ const chapter = (url) => {
 var bookSource = JSON.stringify({
   name: "天籁小说",
   url: "tianlaixsapp.com",
-  version: 100
+  version: 101
 })
