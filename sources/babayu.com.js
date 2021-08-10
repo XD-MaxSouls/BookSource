@@ -42,14 +42,26 @@ const catalog = (url) => {
   return JSON.stringify(array)
 }
 
-//章节
 const chapter = (url) => {
-    let $ = HTML.parse(GET(url))
-  return $('#BookText')
+  let content = ""
+  let i = 2
+  let first_url = url
+  while (true) {
+    let response = GET(url)
+    let $ = HTML.parse(response)
+    content += $('#BookText')
+    let next_btn = $('div.articlebtn > a:contains(下一页)')
+    if (next_btn.length == 0) {
+      break
+    }
+    url = first_url.replace('.html', `_${i}.html`);
+    i += 1
+  }
+  return content
 }
 
 var bookSource = JSON.stringify({
   name: "巴巴鱼小说",
   url: "babayu.com",
-  version: 100
+  version: 101
 })
