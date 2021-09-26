@@ -2,7 +2,7 @@ const baseUrl = "https://www.babayu.com"
 
 //搜索
 const search = (key) => {
-  let response = POST(`${baseUrl}/search.html`,{data:`keyword=${encodeURI(key)}`})
+  let response = POST(`${baseUrl}/search.html`,{data:`wd=${encodeURI(key)}`})
   let array = []
   let $ = HTML.parse(response)
   $('ul.search-list > li').forEach((child) => {
@@ -32,7 +32,7 @@ const catalog = (url) => {
   let response = GET(url)
   let $ = HTML.parse(response)
   let array = []
-    $('ul.chapter-list > li').forEach((chapter) => {
+    $('ul.chapter-list > li').reverse().forEach((chapter) => {
       let $ = HTML.parse(chapter)
       array.push({
         name: $('a').text(),
@@ -64,5 +64,5 @@ const chapter = (url) => {
 var bookSource = JSON.stringify({
   name: "巴巴鱼小说",
   url: "babayu.com",
-  version: 101
+  version: 102
 })
