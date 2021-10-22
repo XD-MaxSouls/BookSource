@@ -6,7 +6,7 @@ const baseUrl = "http://trxs.me"
  * @returns {[{name, author, cover, detail}]}
  */
 const search = (key) => {
-  let response = POST(`${baseUrl}/e/search/index.php`,{data:`keyboard=${ENCODE(key,'gb2312')}&show=title&classid=0`})
+  let response = POST(`${baseUrl}/e/search/indexsearch.php`,{data:`keyboard=${ENCODE(key,'gb2312')}&show=title&classid=0`})
   let array = []
   let $ = HTML.parse(response)
     $('.books > div').forEach((child) => {
@@ -69,5 +69,5 @@ const chapter = (url) => {
 var bookSource = JSON.stringify({
   name: "同人小说",
   url: "trxs.me",
-  version: 100
+  version: 101
 })
