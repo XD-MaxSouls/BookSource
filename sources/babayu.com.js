@@ -2,7 +2,7 @@ const baseUrl = "https://www.babayu.com"
 
 //搜索
 const search = (key) => {
-  let response = POST(`${baseUrl}/search.html`,{data:`wd=${encodeURI(key)}`})
+  let response = POST(`${baseUrl}/so.html`,{data:`dd=${encodeURI(key)}`})
   let array = []
   let $ = HTML.parse(response)
   $('ul.search-list > li').forEach((child) => {
@@ -64,5 +64,5 @@ const chapter = (url) => {
 var bookSource = JSON.stringify({
   name: "巴巴鱼小说",
   url: "babayu.com",
-  version: 102
+  version: 103
 })
