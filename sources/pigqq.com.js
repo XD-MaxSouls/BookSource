@@ -8,7 +8,7 @@ const search = (key) => {
       name: child.Name,
       author: child.Author,
       cover: child.Img,
-      detail: `https://infosxs.pigqq.com/BookFiles/Html/${parseInt(child.Id/3) + 1}/${child.Id}/info.html`
+      detail: `https://infosxs.pigqq.com/BookFiles/Html/${parseInt(child.Id/1000) + 1}/${child.Id}/info.html`
     })
   })
   return JSON.stringify(array)
@@ -24,7 +24,7 @@ const detail = (url) => {
     category: $.CName,
     update: $.LastTime,
     lastChapter: $.LastChapter,
-    catalog: `${parseInt($.Id.toString().slice(0,3)) + 1}/${$.Id}`
+    catalog: `${parseInt($.Id/1000) + 1}/${$.Id}`
   }
   return JSON.stringify(book)
 }
