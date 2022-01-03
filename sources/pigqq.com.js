@@ -1,6 +1,6 @@
 //搜索
 const search = (key) => {
-  let response = GET(`https://souxs.leeyegy.com/search.aspx?key=${encodeURI(key)}&page=1&siteid=app2`)
+  let response = GET(`https://souxs.pigqq.com/search.aspx?key=${encodeURI(key)}&page=1&siteid=app2`)
   let array = []
   let $ = JSON.parse(response)
   $.data.forEach((child) => {
@@ -8,7 +8,7 @@ const search = (key) => {
       name: child.Name,
       author: child.Author,
       cover: child.Img,
-      detail: `https://infosxs.pysmei.com/BookFiles/Html/${parseInt(child.Id.slice(0,3)) + 1}/${child.Id}/info.html`
+      detail: `https://infosxs.pigqq.com/BookFiles/Html/${parseInt(child.Id/3) + 1}/${child.Id}/info.html`
     })
   })
   return JSON.stringify(array)
@@ -31,7 +31,7 @@ const detail = (url) => {
 
 //目录
 const catalog = (url) => {
-  let response = GET(`https://infosxs.pysmei.com/BookFiles/Html/${url}/index.html`).replaceAll("},]","}]")
+  let response = GET(`https://infosxs.pigqq.com/BookFiles/Html/${url}/index.html`).replaceAll("},]","}]")
   let $ = JSON.parse(response)
   let array = []
   $.data.list.forEach((booklet) => {
@@ -39,7 +39,7 @@ const catalog = (url) => {
     booklet.list.forEach((chapter) => {
       array.push({
         name: chapter.name,
-        url: `https://contentxs.pysmei.com/BookFiles/Html/${url}/${chapter.id}.html`
+        url: `https://contentxs.pigqq.com/BookFiles/Html/${url}/${chapter.id}.html`
       })
     })
   })
@@ -54,6 +54,6 @@ const chapter = (url) => {
 
 var bookSource = JSON.stringify({
   name: "笔趣阁",
-  url: "pysmei.com",
+  url: "pigqq.com",
   version: 100
 })
