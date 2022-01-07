@@ -1,4 +1,4 @@
-const baseUrl = "https://www.9txs.org"
+const baseUrl = "https://www.9taoxs.com"
 
 /**
  * 搜索
@@ -6,19 +6,18 @@ const baseUrl = "https://www.9txs.org"
  * @returns {[{name, author, cover, detail}]}
  */
 const search = (key) => {
-  let response = POST(`https://so.9txs.org/www`,{data:`searchkey=${encodeURI(key)}`})
+  let response = POST(`${baseUrl}/search.html`,{data:`searchkey=${encodeURI(key)}`})
   let array = []
   let $ = HTML.parse(response)
-    $('ul.library > li').forEach((child) => {
-      let $ = HTML.parse(child)
-      array.push({
-        name: $('a.bookname').text(),
-        author: $('a.author').text(),
-        cover: $('a.bookimg > img').attr('src'),
-        detail: $('a.bookname').attr('href'),
-      })
+  $('ul.library > li').forEach((child) => {
+    let $ = HTML.parse(child)
+    array.push({
+      name: $('a.bookname').text(),
+      author: $('a.author').text(),
+      cover: $('a.bookimg > img').attr('src'),
+      detail: $('a.bookname').attr('href'),
     })
-  
+  })
   return JSON.stringify(array)
 }
 
@@ -68,13 +67,13 @@ const catalog = (url) => {
  */
 const chapter = (url) => {
   let res = GET(url)
-  let response = res.replace("九桃小说 老域名(9txs.com)被墙，请您牢记本站最新域名(9txs.org)","").replace(/您可以在百度里搜索“.+九桃小说\(9txs.org\)”查找最新章节！/,"")
+  let response = res.replace("九桃小说 老域名(9txs.com)被墙，请您牢记本站最新域名(9taoxs.com)","").replace(/您可以在百度里搜索“.+九桃小说\(9taoxs.com\)”查找最新章节！/,"")
   let $ = HTML.parse(response)
   return $('#content')
 }
 
 var bookSource = JSON.stringify({
   name: "九桃小说",
-  url: "9txs.org",
+  url: "9taoxs.com",
   version: 100
 })
