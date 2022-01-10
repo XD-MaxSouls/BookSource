@@ -48,11 +48,11 @@ const catalog = (url) => {
 //章节
 const chapter = (url) => {
     let response = GET(url)
-  return response.replace(/&nbsp;/g,"")
+  return response.replaceAll("&nbsp;","").replaceAll("????","")
 }
 
 var bookSource = JSON.stringify({
   name: "天籁小说",
   url: "tianlaixsapp.com",
-  version: 101
+  version: 102
 })
