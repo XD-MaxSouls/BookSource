@@ -2,20 +2,21 @@ require('crypto-js')
 
 //搜索
 const search = (key) => {
-  let sign = CryptoJS.MD5(`p33d3d7giyv8hlsdappId=&keyword=${key}&marketChannel=oppo&osType=2&packageName=com.letuapp.reader&page_num=1&product=1&sysVer=10&time=${Math.round(new Date()/1000)}&token=&udid=a5727bd9-7a6d-3a8c-9367-d1fe25bc09de&ver=1.9.2ac9de0edzhozh5fwcqi3bn0w5cqvht0u`).toString()
+  let time = Math.round(new Date()/1000)
+  let sign = CryptoJS.MD5(`p33d3d7giyv8hlsdappId=&keyword=${key}&marketChannel=xiaomi&osType=2&packageName=com.letuapp.reader&page_num=1&product=1&sysVer=11&time=${time}&token=&udid=a2b4f4fb-da97-388f-ae30-63d1980f70bc&ver=1.9.8ac9de0edzhozh5fwcqi3bn0w5cqvht0u`).toString().toUpperCase()
   let data = JSON.stringify({
     product:1,
-    ver:"1.9.2",
-    marketChannel:"oppo",
+    ver:"1.9.8",
+    marketChannel:"xiaomi",
     sign:sign,
     page_num:1,
-    sysVer:10,
+    sysVer:11,
     token:"",
     appId:"",
     osType:2,
-    time:Math.round(new Date()/1000),
+    time:time,
     packageName:"com.letuapp.reader",
-    udid:"a5727bd9-7a6d-3a8c-9367-d1fe25bc09de",
+    udid:"a2b4f4fb-da97-388f-ae30-63d1980f70bc",
     keyword:key
     })
   let response = POST(`http://door.tl05.com/book/search`,{data})
@@ -34,19 +35,20 @@ const search = (key) => {
 
 //详情
 const detail = (url) => {
-    let sign = CryptoJS.MD5(`p33d3d7giyv8hlsdappId=&book_id=${url}&marketChannel=oppo&osType=2&packageName=com.letuapp.reader&product=1&sysVer=10&time=${Math.round(new Date()/1000)}&token=&udid=a5727bd9-7a6d-3a8c-9367-d1fe25bc09de&ver=1.9.2ac9de0edzhozh5fwcqi3bn0w5cqvht0u`).toString()
+  let time = Math.round(new Date()/1000)
+  let sign = CryptoJS.MD5(`p33d3d7giyv8hlsdappId=&book_id=${url}&marketChannel=xiaomi&osType=2&packageName=com.letuapp.reader&product=1&sysVer=11&time=${time}&token=&udid=a2b4f4fb-da97-388f-ae30-63d1980f70bc&ver=1.9.8ac9de0edzhozh5fwcqi3bn0w5cqvht0u`).toString().toUpperCase()
   let data = JSON.stringify({
     product:1,
-    ver:"1.9.2",
+    ver:"1.9.8",
     appId:"",
     osType:2,
-    marketChannel:"oppo",
+    marketChannel:"xiaomi",
     sign:sign,
-    sysVer:10,
-    time:Math.round(new Date()/1000),
+    sysVer:11,
+    time:time,
     packageName:"com.letuapp.reader",
     book_id:url,
-    udid:"a5727bd9-7a6d-3a8c-9367-d1fe25bc09de",
+    udid:"a2b4f4fb-da97-388f-ae30-63d1980f70bc",
     token:""
     })
   let response = POST(`http://door.tl05.com/book/info`,{data})
@@ -54,8 +56,10 @@ const detail = (url) => {
   let book = {
     summary: $.description,
     status: $.finished,
+    category: $.tag[0].tab,
     words: $.total_words.replace("字",""),
     update: $.last_chapter_time.replace("更新于",""),
+    lastChapter: $.last_chapter,
     catalog: $.book_id
   }
   return JSON.stringify(book)
@@ -63,22 +67,23 @@ const detail = (url) => {
 
 //目录
 const catalog = (url) => {
-    let sign = CryptoJS.MD5(`p33d3d7giyv8hlsdappId=&book_id=${url}&marketChannel=oppo&osType=2&packageName=com.letuapp.reader&product=1&sysVer=10&time=${Math.round(new Date()/1000)}&token=&udid=a5727bd9-7a6d-3a8c-9367-d1fe25bc09de&ver=1.9.2ac9de0edzhozh5fwcqi3bn0w5cqvht0u`).toString()
+  let time = Math.round(new Date()/1000)
+  let sign = CryptoJS.MD5(`p33d3d7giyv8hlsdappId=&book_id=${url}&marketChannel=xiaomi&osType=2&packageName=com.letuapp.reader&product=1&sysVer=11&time=${time}&token=&udid=a2b4f4fb-da97-388f-ae30-63d1980f70bc&ver=1.9.8ac9de0edzhozh5fwcqi3bn0w5cqvht0u`).toString().toUpperCase()
   let data = JSON.stringify({
     product:1,
-    ver:"1.9.2",
+    ver:"1.9.8",
     appId:"",
     osType:2,
-    marketChannel:"oppo",
+    marketChannel:"xiaomi",
     sign:sign,
-    sysVer:10,
-    time:Math.round(new Date()/1000),
+    sysVer:11,
+    time:time,
     packageName:"com.letuapp.reader",
     book_id:url,
-    udid:"a5727bd9-7a6d-3a8c-9367-d1fe25bc09de",
+    udid:"a2b4f4fb-da97-388f-ae30-63d1980f70bc",
     token:""
     })
-  let response = POST(`http://door.tl05.com/chapter/new-catalog`,{data})
+  let response = POST(`http://door.tl05.com/chapter/catalog`,{data})
   let $ = JSON.parse(response)
   let array = []
   $.data.chapter_list.forEach(chapter => {
@@ -92,21 +97,22 @@ const catalog = (url) => {
 
 //章节
 const chapter = (url) => {
-    let sign = CryptoJS.MD5(`p33d3d7giyv8hlsdappId=&book_id=${url.query('bid')}&chapter_id=${url.query('cid')}&marketChannel=oppo&osType=2&packageName=com.letuapp.reader&product=1&sysVer=10&time=${Math.round(new Date()/1000)}&token=&udid=a5727bd9-7a6d-3a8c-9367-d1fe25bc09de&ver=1.9.2ac9de0edzhozh5fwcqi3bn0w5cqvht0u`).toString()
+  let time = Math.round(new Date()/1000)
+  let sign = CryptoJS.MD5(`p33d3d7giyv8hlsdappId=&book_id=${url.query('bid')}&chapter_id=${url.query('cid')}&marketChannel=xiaomi&osType=2&packageName=com.letuapp.reader&product=1&sysVer=11&time=${time}&token=&udid=a2b4f4fb-da97-388f-ae30-63d1980f70bc&ver=1.9.8ac9de0edzhozh5fwcqi3bn0w5cqvht0u`).toString().toUpperCase()
   let data = JSON.stringify({
     product:1,
-    ver:"1.9.2",
-    marketChannel:"oppo",
+    ver:"1.9.8",
+    marketChannel:"xiaomi",
     sign:sign,
-    sysVer:10,
+    sysVer:11,
     book_id:url.query('bid'),
     token:"",
     appId:"",
     osType:2,
-    time:Math.round(new Date()/1000),
+    time:time,
     packageName:"com.letuapp.reader",
     chapter_id:url.query('cid'),
-    udid:"a5727bd9-7a6d-3a8c-9367-d1fe25bc09de"
+    udid:"a2b4f4fb-da97-388f-ae30-63d1980f70bc"
     })
     let $ = JSON.parse(POST('http://door.tl05.com/chapter/text',{data})).data
   return $.content.trim()
@@ -115,5 +121,5 @@ const chapter = (url) => {
 var bookSource = JSON.stringify({
   name: "乐兔小说",
   url: "tl05.com",
-  version: 100
+  version: 101
 })
