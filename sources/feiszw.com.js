@@ -135,15 +135,14 @@ var update=src.match(/update='(.*?)'/)[1]
   } 
   text = decodeURIComponent(escape(base64decode(c6(base64decode(content),update)))).replace("飞速中文网（m.feixs.com）","");
   let $ = HTML.parse(src)
-  let con = $('#nr1').remove("a,[style=text-align:center],[style=font-size:12px;color:#888;line-height:1.2rem;text-align:center],[style=font-size:12px;text-indent:0;color:#888;text-align:center]")
+  let con = $('#nr1').remove("[style]")
   if(text) text = text
   else text = con
-console.log(text)
   return text
 }
 
 var bookSource = JSON.stringify({
   name: "飞速中文",
   url: "feiszw.com",
-  version: 101
+  version: 102
 })
