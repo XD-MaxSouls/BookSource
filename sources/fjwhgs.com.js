@@ -11,18 +11,18 @@ const decrypt = function (data) {
     return decrypted.toString(CryptoJS.enc.Utf8)
 }
 
-const header = ["package:com.ruffianhankin.meritreader",`time:${Math.round(new Date()/1000)}`,`sign:${CryptoJS.MD5("com.ruffianhankin.meritreader1" + Math.round(new Date()/1000) +"vhjJVz1St6tK7!8n#B0MqRIuE2Dh7!C#")}`,"pt:1"]
+const headers = ["package:com.ruffianhankin.meritreader",`time:${Math.round(new Date()/1000)}`,`sign:${CryptoJS.MD5("com.ruffianhankin.meritreader1" + Math.round(new Date()/1000) +"vhjJVz1St6tK7!8n#B0MqRIuE2Dh7!C#")}`,"pt:1"]
 
 //搜索
 const search = (key) => {
-  let response = GET(`https://s.xcfcch.com/v1/lists.api?keyword=${key}`,{headers:header})
+  let response = GET(`https://s.fjwhgs.com/v1/lists.api?keyword=${key}`,{headers})
   let $ = JSON.parse(response)
   let array = []
   $.data.forEach((child) => {
     array.push({
       name: child.name,
       author: child.author,
-      cover: `https://c-res.xcfcch.com/${child.image}`,
+      cover: `https://c-res.fjwhgs.com/${child.image}`,
       detail: `${child.book_id.toString().slice(0,3)}/${child.book_id}`,
     })
   })
@@ -31,9 +31,9 @@ const search = (key) => {
 
 //详情
 const detail = (url) => {
-  let response = GET(`https://book.xcfcch.com/details/${url}.html`,{headers:header})
+  let response = GET(`https://book.fjwhgs.com/details/${url}.html`,{headers})
   let $ = JSON.parse(response).data
-  let v = JSON.parse(GET(`https://book.xcfcch.com/source/${url}.html`,{headers:header})).data[0]
+  let v = JSON.parse(GET(`https://book.fjwhgs.com/source/${url}.html`,{headers})).data[0]
   let book = {
     summary: $.remark,
     status: $.status == 2 ? '连载' : '完结',
@@ -41,20 +41,20 @@ const detail = (url) => {
     words: $.words_number,
     update: $.updated_at,
     lastChapter: $.last_chapter_name,
-    catalog: `https://catalog.xcfcch.com/${v.site_path}`
+    catalog: `https://catalog.fjwhgs.com/${v.site_path}`
   }
   return JSON.stringify(book)
 }
 
 //目录
 const catalog = (url) => {
-  let response = GET(url,{headers:header})
+  let response = GET(url,{headers})
   let $ = JSON.parse(response)
   let array = []
   $.data.forEach(chapter => {
       array.push({
         name: decrypt(chapter.name),
-        url: `https://chapter.xcfcch.com/${chapter.path}`
+        url: `https://chapter.fjwhgs.com/${chapter.path}`
       })
     })
   return JSON.stringify(array)
@@ -62,12 +62,12 @@ const catalog = (url) => {
 
 //章节
 const chapter = (url) => {
-    let $ = JSON.parse(GET(url,{headers:header})).data
+    let $ = JSON.parse(GET(url,{headers})).data
   return decrypt($.content).trim()
 }
 
 var bookSource = JSON.stringify({
   name: "值得阅读",
-  url: "xcfcch.com",
+  url: "fjwhgs.com",
   version: 100
 })
