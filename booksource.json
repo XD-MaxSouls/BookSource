@@ -1,0 +1,225 @@
+{
+  "bookSourceComment": "",
+  "bookSourceName": "菠萝包轻小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://minipapi.sfacg.com",
+  "concurrentRate": "",
+  "customOrder": -88962618,
+  "enabled": true,
+  "enabledExplore": false,
+  "header": "{\n\t\"sf-minip-info\":\"minip_novel/1.0.70(android;11)/wxmp\"\n}",
+  "lastUpdateTime": 1650635915153,
+  "loginUi": "[\n  {\n    \"name\": \"账号\",\n    \"type\": \"text\"\n  },\n  {\n    \"name\": \"密码\",\n    \"type\": \"password\"\n  }\n]",
+  "loginUrl": "@js:\nune=source.getLoginInfoMap().get(\"账号\")\npwd=source.getLoginInfoMap().get(\"密码\")\n\nif(une&&pwd) {\n\t let body=JSON.stringify({\n\t   username: String(une),\n    password: String(pwd)\n  })\n  let url='https://minipapi.sfacg.com/pas/mpapi/sessions'\n  ck=java.post(url,body,{\"sf-minip-info\":\"minip_novel/1.0.70(android;11)/wxmp\",\"Content-Type\":\"application/json\"}).cookies()\n  \n   header=JSON.stringify({\n \t\"Cookie\": String(ck).match(/\\{(.*?)\\}/)[1].replace(/,/g,';')\n \t})\n\tsource.putLoginHeader(header)\n}",
+  "respondTime": 180000,
+  "ruleBookInfo": {
+    "author": "authorName",
+    "coverUrl": "novelCover",
+    "init": "data",
+    "intro": "expand.intro",
+    "kind": "expand.typeName",
+    "lastChapter": "expand.latestChapter.title",
+    "name": "novelName",
+    "tocUrl": "https://minipapi.sfacg.com/pas/mpapi/novels/{{$.novelId}}/dirs",
+    "wordCount": "charCount"
+  },
+  "ruleContent": {
+    "content": "data.expand.content##\\[img.*?\\]##<img src=\"",
+    "payAction": "",
+    "replaceRegex": "##\\[.*img\\]##\"/>"
+  },
+  "ruleExplore": {
+    "bookList": ""
+  },
+  "ruleSearch": {
+    "author": "authorName",
+    "bookList": "data.novels",
+    "bookUrl": "https://minipapi.sfacg.com/pas/mpapi/novels/{{$.novelId}}?expand=latestchapter,chapterCount,typeName,intro,fav,ticket,pointCount,tags,sysTags,signlevel,discount,discountExpireDate,totalNeedFireMoney,originTotalNeedFireMoney",
+    "checkKeyWord": "",
+    "coverUrl": "novelCover",
+    "lastChapter": "",
+    "name": "novelName",
+    "wordCount": "charCount"
+  },
+  "ruleToc": {
+    "chapterList": "$.data.volumeList\n<js>\nlet array = []\nresult.forEach((booklet) => {\n   array.push({\n   \t  name: booklet.title,\n   \t  isVolume:true\n   \t})\n   booklet.chapterList.forEach((chapter) => {\n      array.push({\n         name: chapter.title,\n         url: \"https://minipapi.sfacg.com/pas/mpapi/Chaps/\" + chapter.chapId + \"?expand=content,needFireMoney,originNeedFireMoney,tsukkomi&autoOrder=true\",\n         vip: chapter.isVip,\n         time:chapter.AddTime.replace(\"T\",\" \")\n      })\n    })\n  })\narray\n</js>",
+    "chapterName": "name",
+    "chapterUrl": "url",
+    "isVip": "vip",
+    "isVolume": "isVolume",
+    "nextTocUrl": "",
+    "updateTime": "time"
+  },
+  "searchUrl": "https://minipapi.sfacg.com/pas/mpapi/search/novels/result?q={{key}}&size=20&page=0&expand=",
+  "weight": 0
+}
+{
+  "bookSourceComment": "",
+  "bookSourceGroup": "",
+  "bookSourceName": "次元姬小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://api.hwnovel.com",
+  "customOrder": 0,
+  "enabled": true,
+  "enabledExplore": true,
+  "exploreUrl": "",
+  "header": "{\n\t\"channel\":\"25\",\n\t\"deviceno\":\"0\",\n\t\"platform\":\"1\",\n\t\"version\":\"3.0.4\",\n\t\"token\":\"\"\n}",
+  "lastUpdateTime": 1650580184464,
+  "loginUi": "[\n  {\n    \"name\": \"账号\",\n    \"type\": \"text\"\n  },\n  {\n    \"name\": \"验证码\",\n    \"type\": \"text\"\n  }\n]",
+  "loginUrl": "<js>\nune=String(source.getLoginInfoMap().get(\"账号\"))\npwd=String(source.getLoginInfoMap().get(\"验证码\"))\n\nfunction guid() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n  \t  var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);\n  \t  return v.toString(16);\n  \t}).replace(/-/g,\"\");\n}\n\neval(String(java.cacheFile(\"https://gitee.com/lisai444/yuedu/raw/master/crypto/crypto-js.js\")));\n\nfunction encode (data) {\n\tlet key = CryptoJS.enc.Utf8.parse('ZUreQN0E')\n encrypted = CryptoJS.DES.encrypt(data, key, {\n \t  mode: CryptoJS.mode.ECB,\n   padding: CryptoJS.pad.Pkcs7\n })\n return encrypted.toString()\n}\n\nif(une != 0 && pwd == 0) {\n\tlet timestamp = Math.round(new Date())\n\tlet requestId = guid()\n\tlet param = encode(JSON.stringify({\n   phone:une,\n   smsType:\"1\",\n   timestamp:timestamp\n  }))\n  let sign = java.md5Encode(String(java.base64Encode(\"param=\"+param+\"&requestId=\"+requestId+\"&timestamp=\"+timestamp+\"&key=NpkTYvpvhJjEog8Y051gQDHmReY54z5t3F0zSd9QEFuxWGqfC8g8Y4GPuabq0KPdxArlji4dSnnHCARHnkqYBLu7iIw55ibTo18\")).replace(/\\n/g,'')).toString().toUpperCase()\n  let data = JSON.stringify({\n    param:param,\n    requestId:requestId,\n    sign:String(sign),\n    timestamp:timestamp\n  })\n  let op = JSON.stringify({\n    method: \"POST\",\n    body: data\n  \t})\n  \tjava.ajax(`https://api.hwnovel.com/api/ciyuanji/client/login/getPhoneCode,` + op)\n}\nif(une != 0 && pwd != 0) {\n  let timestamp = Math.round(new Date())\n  let requestId = guid()\n  let param = encode(JSON.stringify({\n    phone:une,\n    phoneCode:pwd,\n    timestamp:timestamp\n  }))\n  let sign = java.md5Encode(String(java.base64Encode(\"param=\"+param+\"&requestId=\"+requestId+\"&timestamp=\"+timestamp+\"&key=NpkTYvpvhJjEog8Y051gQDHmReY54z5t3F0zSd9QEFuxWGqfC8g8Y4GPuabq0KPdxArlji4dSnnHCARHnkqYBLu7iIw55ibTo18\")).replace(/\\n/g,'')).toString().toUpperCase()\n  let data = JSON.stringify({\n    param:param,\n    requestId:requestId,\n    sign:String(sign),\n    timestamp:timestamp\n  })\n  let op = JSON.stringify({\n    method: \"POST\",\n    body: data\n  \t})\n  let response = java.ajax(`https://api.hwnovel.com/api/ciyuanji/client/login/phone,` + op)\n  let $ = JSON.parse(response)\n  let token = $.data.userInfo.token\n  header=JSON.stringify({\n \t    \"token\": token\n \t })\n\t source.putLoginHeader(header)\n}\n</js>",
+  "respondTime": 180000,
+  "ruleBookInfo": {
+    "author": "authorName",
+    "coverUrl": "imgUrl",
+    "init": "data.book",
+    "intro": "notes",
+    "kind": "$.tagList[*].tagName",
+    "lastChapter": "latestChapterName",
+    "name": "bookName",
+    "tocUrl": "<js>\nfunction guid() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);\n    return v.toString(16);\n  });\n}\n\neval(String(java.cacheFile(\"https://gitee.com/lisai444/yuedu/raw/master/crypto/crypto-js.js\")));\n\nfunction encode (data) {\n  let key = CryptoJS.enc.Utf8.parse('ZUreQN0E')\n  encrypted = CryptoJS.DES.encrypt(data, key, {\n    mode: CryptoJS.mode.ECB,\n    padding: CryptoJS.pad.Pkcs7\n  })\n  return encrypted.toString()\n}\n\n  let timestamp = Math.round(new Date())\n  let requestId = guid()\n  let param = encode(JSON.stringify({\n  \t  sortType:\"1\",\n    pageNo:\"1\",\n    pageSize:\"9999\",\n    bookId:\"{{$.bookId}}\",\n    timestamp:timestamp\n  }))\n  let sign = java.md5Encode(String(java.base64Encode(\"param=\"+param+\"&requestId=\"+requestId+\"&timestamp=\"+timestamp+\"&key=NpkTYvpvhJjEog8Y051gQDHmReY54z5t3F0zSd9QEFuxWGqfC8g8Y4GPuabq0KPdxArlji4dSnnHCARHnkqYBLu7iIw55ibTo18\")).replace(/\\n/g,'')).toString().toUpperCase()\n  \n  java.put('bid',{{$.bookId}})\n\n\"https://api.hwnovel.com/api/ciyuanji/client/chapter/getChapterListByBookId?param=\"+encodeURIComponent(param)+\"&requestId=\"+requestId+\"&sign=\"+sign+\"&timestamp=\"+timestamp\n</js>",
+    "wordCount": "wordCount"
+  },
+  "ruleContent": {
+    "content": "data.chapter.content##\\n##\n<js>\neval(String(java.cacheFile(\"https://gitee.com/lisai444/yuedu/raw/master/crypto/crypto-js.js\")));\n\tfunction decode (data) {\n    var key = CryptoJS.enc.Utf8.parse('ZUreQN0E')\n    decrypted = CryptoJS.DES.decrypt(data, key, {\n        mode: CryptoJS.mode.ECB,\n        padding: CryptoJS.pad.Pkcs7\n    })\n    return decrypted.toString(CryptoJS.enc.Utf8)\n}\ndecode(result)\n</js>",
+    "webJs": ""
+  },
+  "ruleExplore": {
+    "author": "authorName",
+    "bookList": "data.bookList",
+    "bookUrl": "<js>\nfunction guid() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);\n    return v.toString(16);\n  }).replace(/-/g,\"\");\n}\n\neval(String(java.cacheFile(\"https://gitee.com/lisai444/yuedu/raw/master/crypto/crypto-js.js\")));\n\nfunction encode (data) {\n  let key = CryptoJS.enc.Utf8.parse('ZUreQN0E')\n  encrypted = CryptoJS.DES.encrypt(data, key, {\n    mode: CryptoJS.mode.ECB,\n    padding: CryptoJS.pad.Pkcs7\n  })\n  return encrypted.toString()\n}\n\n  let timestamp = Math.round(new Date())\n  let requestId = guid()\n  let param = encode(JSON.stringify({\n    bookId:String({{$.bookId}}),\n    timestamp:timestamp\n  }))\n  let sign = java.md5Encode(String(java.base64Encode(\"param=\"+param+\"&requestId=\"+requestId+\"&timestamp=\"+timestamp+\"&key=NpkTYvpvhJjEog8Y051gQDHmReY54z5t3F0zSd9QEFuxWGqfC8g8Y4GPuabq0KPdxArlji4dSnnHCARHnkqYBLu7iIw55ibTo18\")).replace(/\\n/g,'')).toString().toUpperCase()\n\n\"https://api.hwnovel.com/api/ciyuanji/client/book/getBookDetail?param=\"+encodeURIComponent(param)+\"&requestId=\"+requestId+\"&sign=\"+sign+\"&timestamp=\"+timestamp\n</js>",
+    "coverUrl": "imgUrl",
+    "intro": "notes",
+    "kind": "tagName",
+    "name": "bookName",
+    "wordCount": "wordCount"
+  },
+  "ruleSearch": {
+    "author": "authorName",
+    "bookList": "data.esBookList",
+    "bookUrl": "<js>\nfunction guid() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);\n    return v.toString(16);\n  }).replace(/-/g,\"\");\n}\n\neval(String(java.cacheFile(\"https://gitee.com/lisai444/yuedu/raw/master/crypto/crypto-js.js\")));\n\nfunction encode (data) {\n  let key = CryptoJS.enc.Utf8.parse('ZUreQN0E')\n  encrypted = CryptoJS.DES.encrypt(data, key, {\n    mode: CryptoJS.mode.ECB,\n    padding: CryptoJS.pad.Pkcs7\n  })\n  return encrypted.toString()\n}\n\n  let timestamp = Math.round(new Date())\n  let requestId = guid()\n  let param = encode(JSON.stringify({\n    bookId:String({{$.bookId}}),\n    timestamp:timestamp\n  }))\n  let sign = java.md5Encode(String(java.base64Encode(\"param=\"+param+\"&requestId=\"+requestId+\"&timestamp=\"+timestamp+\"&key=NpkTYvpvhJjEog8Y051gQDHmReY54z5t3F0zSd9QEFuxWGqfC8g8Y4GPuabq0KPdxArlji4dSnnHCARHnkqYBLu7iIw55ibTo18\")).replace(/\\n/g,'')).toString().toUpperCase()\n\n\"https://api.hwnovel.com/api/ciyuanji/client/book/getBookDetail?param=\"+encodeURIComponent(param)+\"&requestId=\"+requestId+\"&sign=\"+sign+\"&timestamp=\"+timestamp\n</js>",
+    "checkKeyWord": "",
+    "coverUrl": "imgUrl",
+    "intro": "notes",
+    "kind": "tagName",
+    "name": "bookName",
+    "wordCount": "wordCount"
+  },
+  "ruleToc": {
+    "chapterList": "<js>\n    let vlist = []\n    let array = []\n    let vidlist = []\n    let list = JSON.parse(result).data.bookChapter.chapterList\n    list.forEach((booklet) => {\n    \t\n        if (String(vidlist).indexOf(booklet.volumeId) == -1) {\n            vlist.push(booklet);\n            vidlist.push(booklet.volumeId)\n        }\n    })\n    vlist.forEach((booklet) => {\n        let vid = booklet.volumeId\n        array.push({\n            \"name\": String(booklet.title),\n            \"isVolume\":true\n        })\n        list.forEach((chapter) => {\n            if (vid == chapter.volumeId) {\n                array.push({\n                  \"name\": String(chapter.chapterName),\n                  \"url\": String(chapter.chapterId),\n                  \"vip\": chapter.isFee\n                })\n            }\n        })\n    })\n    JSON.stringify(array)\n</js>\n$.[*]",
+    "chapterName": "$.name",
+    "chapterUrl": "<js>\nif(\"{{$.url}}\"!=\"\"){\nfunction guid() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);\n    return v.toString(16);\n  });\n}\n\neval(String(java.cacheFile(\"https://gitee.com/lisai444/yuedu/raw/master/crypto/crypto-js.js\")));\n\nfunction encode (data) {\n  let key = CryptoJS.enc.Utf8.parse('ZUreQN0E')\n  encrypted = CryptoJS.DES.encrypt(data, key, {\n    mode: CryptoJS.mode.ECB,\n    padding: CryptoJS.pad.Pkcs7\n  })\n  return encrypted.toString()\n}\n\n  let timestamp = Math.round(new Date())\n  let requestId = guid()\n  let param = encode(JSON.stringify({\n    bookId:\"{{java.get('bid')}}\",\n    chapterId:\"{{$.url}}\",\n    timestamp:timestamp\n  }))\n  let sign = java.md5Encode(String(java.base64Encode(\"param=\"+param+\"&requestId=\"+requestId+\"&timestamp=\"+timestamp+\"&key=NpkTYvpvhJjEog8Y051gQDHmReY54z5t3F0zSd9QEFuxWGqfC8g8Y4GPuabq0KPdxArlji4dSnnHCARHnkqYBLu7iIw55ibTo18\")).replace(/\\n/g,'')).toString().toUpperCase()\n\n\"https://api.hwnovel.com/api/ciyuanji/client/chapter/getChapterContent?param=\"+encodeURIComponent(param)+\"&requestId=\"+requestId+\"&sign=\"+sign+\"&timestamp=\"+timestamp\n}\n</js>",
+    "isVip": "$.vip",
+    "isVolume": "$.isVolume",
+    "nextTocUrl": ""
+  },
+  "searchUrl": "<js>\nfunction guid() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);\n    return v.toString(16);\n  }).replace(/-/g,\"\");\n}\n\neval(String(java.cacheFile(\"https://gitee.com/lisai444/yuedu/raw/master/crypto/crypto-js.js\")));\n\nfunction encode (data) {\n  let key = CryptoJS.enc.Utf8.parse('ZUreQN0E')\n  encrypted = CryptoJS.DES.encrypt(data, key, {\n    mode: CryptoJS.mode.ECB,\n    padding: CryptoJS.pad.Pkcs7\n  })\n  return encrypted.toString()\n}\n\n  let timestamp = Math.round(new Date())\n  let requestId = guid()\n  let param = encode(JSON.stringify({\n    keyword:key,\n    pageNo:1,\n    pageSize:15,\n    timestamp:timestamp\n  }))\n  let sign = java.md5Encode(String(java.base64Encode(\"param=\"+param+\"&requestId=\"+requestId+\"&timestamp=\"+timestamp+\"&key=NpkTYvpvhJjEog8Y051gQDHmReY54z5t3F0zSd9QEFuxWGqfC8g8Y4GPuabq0KPdxArlji4dSnnHCARHnkqYBLu7iIw55ibTo18\")).replace(/\\n/g,'')).toString().toUpperCase()\n\n\"https://api.hwnovel.com/api/ciyuanji/client/book/searchBookList?param=\"+encodeURIComponent(param)+\"&requestId=\"+requestId+\"&sign=\"+sign+\"&timestamp=\"+timestamp\n</js>",
+  "weight": 0
+}
+{
+  "bookSourceComment": "",
+  "bookSourceName": "息壤中文网",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://android-api.xrzww.com",
+  "customOrder": 0,
+  "enabled": true,
+  "enabledExplore": true,
+  "header": "",
+  "lastUpdateTime": 1650617426635,
+  "loginUi": "[\n  {\n    \"name\": \"账号\",\n    \"type\": \"text\"\n  },\n  {\n    \"name\": \"密码\",\n    \"type\": \"password\"\n  }\n]",
+  "loginUrl": "une=source.getLoginInfoMap().get(\"账号\")\npwd=source.getLoginInfoMap().get(\"密码\")\n\nif(une&&pwd) {\n  let url='https://android-api.xrzww.com/api/login?user_name='+une+'&user_password='+pwd\n   $=JSON.parse(java.ajax(url))\n   \n   header={\n \t\"Authorization\": \"Bearer \"+$.data.token\n \t}\n \tsource.putLoginHeader(JSON.stringify(header))\n}",
+  "respondTime": 180000,
+  "ruleBookInfo": {
+    "author": "novel_author",
+    "coverUrl": "http://oss.xrzww.com{{$.novel_cover}}",
+    "init": "data",
+    "intro": "novel_info",
+    "kind": "novel_tags",
+    "lastChapter": "novel_newcname",
+    "name": "novel_name",
+    "tocUrl": "https://android-api.xrzww.com/api/novelDirectory?nid={{$.novel_id}}&orderBy=asc",
+    "wordCount": "novel_wordnumber"
+  },
+  "ruleContent": {
+    "content": "data.content"
+  },
+  "ruleExplore": {
+    "bookList": ""
+  },
+  "ruleSearch": {
+    "author": "novel_author",
+    "bookList": "data.data",
+    "bookUrl": "https://android-api.xrzww.com/api/detail?novel_id={{$.novel_id}}",
+    "coverUrl": "http://oss.xrzww.com{{$.novel_cover}}",
+    "intro": "novel_info",
+    "kind": "novel_tags",
+    "lastChapter": "novel_newcname",
+    "name": "novel_name",
+    "wordCount": "novel_wordnumber"
+  },
+  "ruleToc": {
+    "chapterList": "$.data\n<js>\nlet array = []\nresult.forEach((booklet) => {\n    array.push({ \n    \t name: booklet.volume_name,\n   \t  isVolume:true\n   \t})\n   booklet.chapter_list.forEach((chapter) => {\n      array.push({\n         name: chapter.chapter_name,\n         url: \"https://android-api.xrzww.com/api/readNew?chapter_id=\" + chapter.chapter_id + \"&nid=\" + chapter.chapter_nid + \"&chapter_order=\" + chapter.chapter_order + \"&vid=\"+ chapter.chapter_vid,\n         vip: chapter.chapter_ispay,\n         time:java.timeFormat(chapter.chapter_time*1000)\n      })\n    })\n  })\narray\n</js>",
+    "chapterName": "name",
+    "chapterUrl": "url",
+    "isPay": "",
+    "isVip": "vip",
+    "isVolume": "isVolume",
+    "nextTocUrl": "",
+    "updateTime": "time"
+  },
+  "searchUrl": "https://android-api.xrzww.com/api/searchAll?search_type=novel&search_value={{key}}&page=1&pageSize=20",
+  "weight": 0
+}
+{
+  "bookSourceComment": "",
+  "bookSourceName": "有毒小说",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://pre-api.youdubook.com",
+  "customOrder": 0,
+  "enabled": true,
+  "enabledExplore": true,
+  "header": "",
+  "lastUpdateTime": 1650617946805,
+  "loginUi": "[\n  {\n    \"name\": \"账号\",\n    \"type\": \"text\"\n  },\n  {\n    \"name\": \"密码\",\n    \"type\": \"password\"\n  }\n]",
+  "loginUrl": "une=source.getLoginInfoMap().get(\"账号\")\npwd=source.getLoginInfoMap().get(\"密码\")\n\nif(une&&pwd) {\n  let url='https://pre-api.youdubook.com/api/login?user_name='+une+'&user_password='+pwd\n   $=JSON.parse(java.ajax(url))\n   \n   header={\n \t\"Authorization\": \"Bearer \"+$.data.token\n \t}\n \tsource.putLoginHeader(JSON.stringify(header))\n}",
+  "respondTime": 180000,
+  "ruleBookInfo": {
+    "author": "novel_author",
+    "coverUrl": "http://oss.xrzww.com{{$.novel_cover}}",
+    "init": "data",
+    "intro": "novel_info",
+    "kind": "novel_tags",
+    "lastChapter": "novel_newcname",
+    "name": "novel_name",
+    "tocUrl": "https://pre-api.youdubook.com/api/novelDirectory?nid={{$.novel_id}}&orderBy=asc",
+    "wordCount": "novel_wordnumber"
+  },
+  "ruleContent": {
+    "content": "data.content"
+  },
+  "ruleExplore": {
+    "bookList": ""
+  },
+  "ruleSearch": {
+    "author": "novel_author",
+    "bookList": "data.data",
+    "bookUrl": "https://pre-api.youdubook.com/api/detail?novel_id={{$.novel_id}}",
+    "coverUrl": "http://oss.xrzww.com{{$.novel_cover}}",
+    "intro": "novel_info",
+    "kind": "novel_tags",
+    "lastChapter": "novel_newcname",
+    "name": "novel_name",
+    "wordCount": "novel_wordnumber"
+  },
+  "ruleToc": {
+    "chapterList": "$.data\n<js>\nlet array = []\nresult.forEach((booklet) => {\n    array.push({ \n    \t name: booklet.volume_name,\n   \t  isVolume:true\n   \t})\n   booklet.chapter_list.forEach((chapter) => {\n      array.push({\n         name: chapter.chapter_name,\n         url: \"https://pre-api.youdubook.com/api/readNew?chapter_id=\" + chapter.chapter_id + \"&nid=\" + chapter.chapter_nid + \"&chapter_order=\" + chapter.chapter_order + \"&vid=\"+ chapter.chapter_vid,\n         vip: chapter.chapter_ispay,\n         time:java.timeFormat(chapter.chapter_time*1000)\n      })\n    })\n  })\narray\n</js>",
+    "chapterName": "name",
+    "chapterUrl": "url",
+    "isPay": "",
+    "isVip": "vip",
+    "isVolume": "isVolume",
+    "nextTocUrl": "",
+    "updateTime": "time"
+  },
+  "searchUrl": "https://pre-api.youdubook.com/api/searchAll?search_type=novel&search_value={{key}}&page=1&pageSize=20",
+  "weight": 0
+}
