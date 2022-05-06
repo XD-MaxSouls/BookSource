@@ -1,10 +1,12 @@
+const headers = ["user-agent:Mozilla/5.0 (Linux; Android 12; Mi 12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Mobile Safari/537.36 EdgA/101.0.1210.39"]
+
 /**
  * 搜索
  * @params {string} key
  * @returns {[{name, author, cover, detail}]}
  */
 const search = (key) => {
-  let response = GET(`https://m.feiszw.com/search.aspx?s=${key}&submit=`)
+  let response = GET(`https://m.feiszw.com/search.aspx?s=${key}&submit=`,{headers})
   let array = []
   let $ = HTML.parse(response)
   $('div.nlist').forEach((child) => {
@@ -25,11 +27,12 @@ const search = (key) => {
  * @returns {[{summary, status, category, words, update, lastChapter, catalog}]}
  */
 const detail = (url) => {
-  let response = GET(url)
+  let response = GET(url,{headers})
   let $ = HTML.parse(response)
   let book = {
     summary: $('[property=og:description]').attr("content").replaceAll("</p>","\n"),
     status: $('span.state_g').text(),
+    category: $('[property=og:novel:category]').attr("content"),
     update: $('div.block_txt2 > p:nth-child(4)').text().replace("更新：",""),
     lastChapter: $('div.block_txt2 > p:nth-child(5)').text().replace("最新：",""),
     catalog: url.replaceAll("/","").replace("https:m.feiszw.combook-","")
@@ -43,7 +46,7 @@ const detail = (url) => {
  * @returns {[{name, url, vip}]}
  */
 const catalog = (url) => {
-  let response = GET(`https://www.feiszw.com/Html/${url}/index.html`)
+  let response = GET(`https://www.feiszw.com/Html/${url}/index.html`,{headers})
   let $ = HTML.parse(response)
   let array = []
   $('div.chapterlist > ul > li').forEach((chapter) => {
@@ -62,7 +65,7 @@ const catalog = (url) => {
  * @returns {string}
  */
 const chapter = (url) => {
-  let src = GET(url)
+  let src = GET(url,{headers})
   let content = src.match(/Content='(.*?)'/)[1];
 var update=src.match(/update='(.*?)'/)[1]
   function aq(ar, as) {
@@ -144,5 +147,5 @@ var update=src.match(/update='(.*?)'/)[1]
 var bookSource = JSON.stringify({
   name: "飞速中文",
   url: "feiszw.com",
-  version: 102
+  version: 103
 })
