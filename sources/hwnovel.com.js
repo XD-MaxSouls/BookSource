@@ -25,7 +25,7 @@ const encrypt = function (data) {
   return encrypted.toString()
 }
 
-const headers = ["channel:25","deviceno:0","platform:1","version:3.0.4",`token:${localStorage.getItem('tk')}`]
+const headers = ["channel:25","deviceno:0","platform:1","version:3.0.4",`token:${LOCAL_STORAGE.getItem('tk')}`]
 
 //搜索
 const search = (key) => {
