@@ -25,7 +25,7 @@ const encrypt = function (data) {
   return encrypted.toString()
 }
 
-const headers = ["channel:25","deviceno:0","platform:1","version:3.0.4",`token:${LOCAL_STORAGE.getItem('tk')}`]
+const headers = ["channel:25","deviceno:0","platform:1","version:3.0.4",`token:${localStorage.getItem('tk')}`]
 
 //搜索
 const search = (key) => {
@@ -141,7 +141,7 @@ const chapter = (url) => {
  * @returns {[{url, nickname, recharge, balance[{name, coin}], sign}]}
  */
 const profile = () => {
-  if(LOCAL_STORAGE.getItem('tk') != 0) {
+  if(localStorage.getItem('tk') != 0) {
     let timestamp = Math.round(new Date())
     let requestId = guid()
     let param = encrypt(JSON.stringify({
@@ -344,7 +344,7 @@ const login = (args) => {
     let response = POST(`https://api.hwnovel.com/api/ciyuanji/client/login/phone`,{data,headers})
     let $ = JSON.parse(response)
     let token = $.data.userInfo.token
-    LOCAL_STORAGE.setItem("tk",token)
+    localStorage.setItem("tk",token)
     if($.code == 200) return "登录成功"
     else return $.msg
   }
@@ -353,7 +353,7 @@ const login = (args) => {
 var bookSource = JSON.stringify({
   name: "次元姬小说",
   url: "hwnovel.com",
-  version: 102,
+  version: 101,
   authorization: JSON.stringify(['account','password']),
   cookies: [".hwnovel.com"],
   ranks: ranks
