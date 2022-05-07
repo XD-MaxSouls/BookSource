@@ -344,7 +344,7 @@ const login = (args) => {
     let response = POST(`https://api.hwnovel.com/api/ciyuanji/client/login/phone`,{data,headers})
     let $ = JSON.parse(response)
     let token = $.data.userInfo.token
-    localStorage.setItem("tk",token)
+    LOCAL_STORAGE.setItem("tk",token)
     if($.code == 200) return "登录成功"
     else return $.msg
   }
