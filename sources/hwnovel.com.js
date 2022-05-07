@@ -353,7 +353,7 @@ const login = (args) => {
 var bookSource = JSON.stringify({
   name: "次元姬小说",
   url: "hwnovel.com",
-  version: 101,
+  version: 102,
   authorization: JSON.stringify(['account','password']),
   cookies: [".hwnovel.com"],
   ranks: ranks
