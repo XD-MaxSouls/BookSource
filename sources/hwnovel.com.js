@@ -141,7 +141,7 @@ const chapter = (url) => {
  * @returns {[{url, nickname, recharge, balance[{name, coin}], sign}]}
  */
 const profile = () => {
-  if(localStorage.getItem('tk') != 0) {
+  if(LOCAL_STORAGE.getItem('tk') != 0) {
     let timestamp = Math.round(new Date())
     let requestId = guid()
     let param = encrypt(JSON.stringify({
