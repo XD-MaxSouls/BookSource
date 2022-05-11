@@ -22,7 +22,7 @@ const search = (key) => {
     array.push({
       name: child.name,
       author: child.author,
-      cover: `https://c-res.fjwhgs.com/${child.image}`,
+      cover: `https://res.fjwhgs.com/${child.image}`,
       detail: `${child.book_id.toString().slice(0,3)}/${child.book_id}`,
     })
   })
@@ -69,5 +69,5 @@ const chapter = (url) => {
 var bookSource = JSON.stringify({
   name: "值得阅读",
   url: "fjwhgs.com",
-  version: 100
+  version: 101
 })
