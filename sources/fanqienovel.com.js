@@ -1,13 +1,11 @@
 //分割数组
 function spArr(arr, num) {
   let newArr = []
-	 for (let i = 0; i < arr.length;) {
-		newArr.push(arr.slice(i, i += num));
+  for (let i = 0; i < arr.length;) {
+    newArr.push(arr.slice(i, i += num));
   }
-	 return newArr
+  return newArr
 }
-
-const baseUrl = "https://fanqienovel.com"
 
 //搜索
 const search = (key) => {
@@ -59,16 +57,23 @@ function timestampToTime(timestamp) {
 //目录
 const catalog = (url) => {
   let array = []
-  let res = JSON.parse(GET(`${baseUrl}/api/reader/directory/detail?bookId=${url}`))
+  let v = []
+  let res = JSON.parse(GET(`https://fanqienovel.com/api/reader/directory/detail?bookId=${url}`))
   let item_list = spArr(res.data.allItemIds,100)
   let page = item_list.length
   for(i=0;i<page;i++) {
     let response = GET(`https://api5-normal-lq.fqnovel.com/reading/bookapi/directory/all_infos/v/?item_ids=${item_list[i]}&iid=2718442795830583&aid=1967&version_code=290`)
-    let $ = JSON.parse(response)
-    $.data.forEach(chapter => {
+    let data = JSON.parse(response).data
+    data.forEach((x) => {
+      if (JSON.stringify(v).indexOf(x.volume_name) == -1) {
+        array.push({
+          name:x.volume_name
+       	})
+       	v.push(x.volume_name)
+      }
       array.push({
-        name: chapter.title,
-        url: `https://novel.snssdk.com/api/novel/book/reader/full/v1/?group_id=${chapter.group_id}&item_id=${chapter.item_id}`
+      	  name: x.title,
+        url: `https://novel.snssdk.com/api/novel/book/reader/full/v1/?group_id=${x.group_id}&item_id=${x.item_id}`
       })
     })
   }
@@ -84,5 +89,5 @@ const chapter = (url) => {
 var bookSource = JSON.stringify({
   name: "番茄小说",
   url: "fanqienovel.com",
-  version: 100
+  version: 102
 })
