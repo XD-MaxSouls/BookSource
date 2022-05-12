@@ -25,7 +25,7 @@ const encrypt = function (data) {
   return encrypted.toString()
 }
 
-const headers = ["channel:25","deviceno:0","platform:1","version:3.0.4",`token:${localStorage.getItem('tk')}`]
+const headers = ["channel:25","deviceno:0","platform:1","version:3.0.3",`token:${localStorage.getItem('tk')}`]
 
 //搜索
 const search = (key) => {
@@ -38,7 +38,7 @@ const search = (key) => {
     timestamp:timestamp
   }))
   let sign = CryptoJS.MD5(ENCODE(`param=${param}&requestId=${requestId}&timestamp=${timestamp}&key=NpkTYvpvhJjEog8Y051gQDHmReY54z5t3F0zSd9QEFuxWGqfC8g8Y4GPuabq0KPdxArlji4dSnnHCARHnkqYBLu7iIw55ibTo18`,"base64").replaceAll("\n","")).toString().toUpperCase()
-  let response = GET(`https://api.hwnovel.com/api/ciyuanji/client/book/searchBookList?param=${param}&requestId=${requestId}&sign=${sign}&timestamp=${timestamp}`,{headers})
+  let response = GET(`https://api.hwnovel.com/api/ciyuanji/client/book/searchBookList?timestamp=${timestamp}&requestId=${requestId}&sign=${sign}&param=${param}`,{headers})
   let $ = JSON.parse(response)
   let array = []
   $.data.esBookList.forEach((child) => {
@@ -131,7 +131,7 @@ const chapter = (url) => {
   //未购买返回403和自动订阅地址
   if ($.isFee == 1&&$.isBuy == 0) throw JSON.stringify({
     code: 403,
-    message: `https://www.ciyuanji.com/chapter/${url.query('cid')}.html?bookId=${url.query('bid')}&ua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36`
+    message: `https://www.ciyuanji.com/chapter/${url.query('cid')}?bookId=${url.query('bid')}&ua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36`
     })
   return decrypt($.chapter.content.replaceAll("\n","")).trim()
 }
